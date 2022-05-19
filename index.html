@@ -15,22 +15,35 @@
 </head>
 	<body>
 		<header>
-      <h1>Keirran Blackley</h1>
-      <h1>Student Developer / Technician</h1>
+		      <h1>Keirran Blackley</h1>
+		      <h1>Student Developer / Technician</h1>
 
-      <ul class="socials">
-          <li> <a href="https://instagram.com/KeiBlackley" target="_blank"> <i class="fa-brands fa-instagram"></i> </a> </li>
-          <li> <a href="htpps://twitter.com/KeiBlackley" target="_blank"> <i class="fa-brands fa-twitter"></i> </a> </li>
-          <li> <a href="https://github.com/KeiBlackley" target="_blank"> <i class="fa-brands fa-github"></i> </a> </li>
-      </ul>
+		      <ul class="socials">
+			  <li> <a href="https://instagram.com/KeiBlackley" target="_blank"> <i class="fa-brands fa-instagram"></i> </a> </li>
+			  <li> <a href="htpps://twitter.com/KeiBlackley" target="_blank"> <i class="fa-brands fa-twitter"></i> </a> </li>
+			  <li> <a href="https://github.com/KeiBlackley" target="_blank"> <i class="fa-brands fa-github"></i> </a> </li>
+		      </ul>
 
-      <nav>
-          <li> <a href="#experience"> Expereice </a> </li>
-          <li> <a href="#education"> Education </a> </li>
-          <li> <a href="#licences"> Licences </a> </li>
-          <li> <a href="#projects"> Projects </a> </li>
-      </nav>
-    </header>
+		      <nav>
+			  <li> <a href="#experience"> Expereice </a> </li>
+			  <li> <a href="#education"> Education </a> </li>
+			  <li> <a href="#licences"> Licences </a> </li>
+			  <li> <a href="#projects"> Projects </a> </li>
+		      </nav>
+		    </header>
+		
+		<span class="icon" onclick="openNav()"> <i class="fa-solid fa-bars"></i> </span>
+			<div id="fullNav" class="overlay">
+			    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			    <div class="overlay-content">
+				<a href="/index"> Keirran Blackley </a>
+				<ul>
+				    <h3> Projects </h3>
+				    <li> <a href="/budgley"> Budgley </a> </li>
+				    <li> <a href="/raspkei"> Raspkei </a> </li>
+				</ul>
+			    </div>
+			</div>
 
     <div class="container">
 
@@ -142,6 +155,16 @@
         
       </div>
     </div>
+		
+		<script>
+		    function openNav() {
+			document.getElementById("fullNav").style.height = "100%";
+		    }
+
+		    function closeNav() {
+			document.getElementById("fullNav").style.height = "0%";
+		    }
+		</script>
 
 		<script src="https://kit.fontawesome.com/bb6eaecf68.js" crossorigin="anonymous"></script>
 	</body>
