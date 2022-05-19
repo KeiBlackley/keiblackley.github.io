@@ -24,6 +24,27 @@ header h1 { margin: 20px; }
 nav li { display: inline-block; }
 nav a { padding: 20px; }
 
+main { margin: 80px; width: 80%; margin: auto; }
+
+
+.icon { position: absolute; top: 40px; right: 50px; font-size: 28px; }
+.icon:hover { cursor: pointer; }
+
+
+
+.overlay { color: #003454; height: 0%; width: 100%; position: fixed; z-index: 1; top: 0; left: 0; background-color: white; overflow-y: hidden; transition: 0.5s; }
+.overlay-content { position: relative; top: 25%; width: 100%; text-align: center; }
+.overlay-content h3 { margin-top: 40px; }
+.overlay a { padding: 20px; font-size: 28px; display: block; transition: 0.3s; }
+
+.overlay .closebtn {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  font-size: 38px;
+}
+
+
 .socials li { font-size: 28px; display: inline-block; margin: 20px; }
 .socials a { padding: 20px; }
 .container {
@@ -60,4 +81,6 @@ nav a { padding: 20px; }
 @media only screen and (max-width: 768px) {
   .container { display: block; }
   .card { width: 100%; margin: 20px auto; }
+  .icon { font-size: 22px; top: 20px; right: 30px; }
+  .overlay .closebtn { top: -10px; right: 10px; }
 }
