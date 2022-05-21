@@ -11,7 +11,6 @@ html, body {
 a, a:visited { display: block; color: inherit; text-decoration: inherit; }
 a:hover { opacity: 0.8; }
 
-
 input, select {
   width: 300px;
   display: inline-block;
@@ -63,10 +62,17 @@ header {
 }
 header h1 { margin: 20px; }
 
+header.raspkei { font-size: 18px; text-align: left; padding: 80px; }
+header.raspkei h1 { font-size: 64px; }
+header.raspkei p { margin: 40px auto; }
+
 nav li { display: inline-block; }
 nav a { padding: 20px; }
 
 main { margin: 80px; width: 80%; margin: auto; }
+
+h2 { margin: 20px; }
+p { margin: 10px auto; }
 
 hr { margin: 40px; }
 
@@ -74,75 +80,9 @@ img { width: 100%; }
 img:hover { opacity: 0.8; }
 
 canvas { margin: auto; }
-.overview {background-color: #fff; color: #003454; box-shadow: 0 0 6px rgba(0, 0, 0, 0.1); width: 300px; margin: 40px; max-height: 375px; border-radius: 5px; }
-.overview .about { height: 225px; padding: 20px; box-sizing: border-box; }
-.calendar h3, .overview .about h3, .overview .about .lead { font-weight: 300; margin: 0; }
-.calendar h3, .overview .about h3 { font-size: 24px; }
-.calendar h3 { margin-bottom: 10px; }
-.overview .info { float: left; padding: 10px 30px 10px 0; }
-.overview .info p { font-size: 11px; color: #aaa; font-weight: 300; }
-.legends { padding-top: 20px; overflow: hidden; }
-.legend { display: block; width: 8px; height: 8px; margin-top: 15px; margin-bottom: 15px; border-radius: 50%; }
-.legend--income { background-color: #8dbf41; }
-.legend--expense { background-color: #bf0404; }
-
-.budget { margin: 40px auto; }
-
-.calendar {
-  background-color: #fff;
-  color: #003454;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  margin: 40px auto;
-  height: 375px;
-  border-radius: 5px;
-  font-size: 14px;
-  padding: 20px;
-}
-.calendar .days {
-   display: grid;
-   gap: 5px;
-   grid-template-columns: repeat(5, 1fr);
-   justify-items: center;
-   text-align: center;
-}
- .calendar .days li {
-    padding: 10px;
-   width: 100%;
-   height: 100%;
-   display: grid;
-   place-items: center;
-   font-weight: bold;
-   position: relative;
-}
-.calendar .days li:hover {
-   background-color: #003454;
-   color: white;
-   border-radius: 50%;
-   cursor: pointer;
-}
-.calendar .days .active {
-   background: #003454;
-   color: #fff;
-   border-radius: 50%;
-}
-.calendar .days li.circle { border-radius: 50%; }
-
-.green, .red, .orange, .active { color: whitesmoke; padding: 10px; }
-.green { background-color: #8dbf41; }
-.red { background-color: #bf0404; }
-.orange { background-color: orange; }
-.active { background-color: var(--col-navy); }
 
 .icon { position: absolute; top: 40px; right: 50px; font-size: 28px; }
 .icon:hover { cursor: pointer; }
-
-.cover {
-  height: 100vh;
-  padding: 160px 80px;
-}
-.cover h1 { font-size: 48px; margin: 20px; }
-.cover p { font-size: 18px; margin: 10px; }
 
 .overlay { color: #003454; height: 0%; width: 100%; position: fixed; z-index: 1; top: 0; left: 0; background-color: white; overflow-y: hidden; transition: 0.5s; }
 .overlay-content { position: relative; top: 25%; width: 100%; text-align: center; }
@@ -156,18 +96,8 @@ canvas { margin: auto; }
   font-size: 38px;
 }
 
-.flex { display: flex; }
-.split { width: 50%; flex: 1; }
-
 .socials li { font-size: 28px; display: inline-block; margin: 20px; }
 .socials a { padding: 20px; }
-.container {
-  display: flex;
-  width: 90%;
-  margin: auto;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
 
 .card {
   background-color: #fff;
@@ -192,13 +122,32 @@ canvas { margin: auto; }
   text-transform: uppercase;
 }
 
+.red { color: rgb(220, 0, 60); }
+
+.cover { overflow-x: hidden; padding: 80px; background-color: white; color: #003454; height: 100vh; }
+.cover h1 { font-size: 64px; }
+
+.screen { display: flex; }
+.split { height: 100%; width: 50%; flex: 1; }
+
+.container-block {
+  display: block;
+  width: 90%;
+  margin: 80px auto;
+}
+.container-flex {
+  display: flex;
+  width: 90%;
+  margin: 80px auto;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
 @media only screen and (max-width: 768px) {
+  .cover h1 { font-size: 48px; }
   .container { display: block; }
   .card { width: 100%; margin: 20px auto; }
-  .calendar { width: 80%; margin: 40px auto; padding: 20px; }
-  .overview { width: 80%; margin: 40px auto; }
   .icon { font-size: 22px; top: 20px; right: 30px; }
   .overlay .closebtn { top: -10px; right: 10px; }
-  .split { width: 100%; flex: 0; }
-  .flex { display: block; }
+  .screen { display: block; } .split { width: 100%; }
 }
