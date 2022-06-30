@@ -24,6 +24,8 @@ header nav li { margin: 5px 20px; display: inline-block; }
 #cover { padding: 160px; background-color: var(--darkBlue); color: var(--white); }
 #cover h1 { margin: 20px; }
 
+#container { width: 600px; margin: auto; }
+
 footer { width: 100%; margin: auto; text-align: center; padding: 40px; }
 
 @media only screen and (max-width: 768px) {
