@@ -9,6 +9,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html, body {
   font-family: "Poppins", sans-serif;
+  white-space: normal;
 }
 
 a, a:link { text-decoration: inherit; color: inherit; }
@@ -24,11 +25,16 @@ header nav li { margin: 5px 20px; display: inline-block; }
 #cover { padding: 160px; background-color: var(--darkBlue); color: var(--white); }
 #cover h1 { margin: 20px; }
 
-#container { width: 600px; margin: auto; }
+#container { max-width: 800px; margin: auto; padding: 40px; }
+#container h2 { margin: 20px auto; }
+#container h3 { border-bottom: solid 2px var(--darkBlue); margin: 20px 0; }
+#container ul { grid-template-columns: auto auto; display: grid; column-gap: 50px; row-gap: 50px; }
+#container li { display: inline-grid; }
 
 footer { width: 100%; margin: auto; text-align: center; padding: 40px; }
 
 @media only screen and (max-width: 768px) {
   header nav { float: left; }
   #cover { padding: 80px; }
+  #container ul { grid-template-columns: auto; }
 }
