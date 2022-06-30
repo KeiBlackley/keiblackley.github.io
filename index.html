@@ -1,171 +1,38 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta content="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title> Keirran Blackley </title>
 
-		<title> KeiBlackley </title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Home of Keirran Blackley's webpage. View his portfolio, contact and projects.">
+        <meta name="keywords" content="Keirran Blackley, Keirran, Blackley, Kei Blackley, Kei, KeiBlackley">
+        <meta name="author" content="Keirran Blackley">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"> </script>
-		
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-    
+        <link href="/assets/images/favicon.png" rel="icon" type="image/x-icon" />
+        <link href="/assets/css/global.css" rel="stylesheet" text="text/css" />
     </head>
-	<body>
-		<header>
-		      <h1>Keirran Blackley</h1>
-		      <h1>Student Developer / Technician</h1>
+    <body>
 
-		      <ul class="socials">
-			  <li> <a href="https://instagram.com/KeiBlackley" target="_blank"> <i class="fa-brands fa-instagram"></i> </a> </li>
-			  <li> <a href="htpps://twitter.com/KeiBlackley" target="_blank"> <i class="fa-brands fa-twitter"></i> </a> </li>
-			  <li> <a href="https://github.com/KeiBlackley" target="_blank"> <i class="fa-brands fa-github"></i> </a> </li>
-		      </ul>
+        <header>
+            <h2> <a href="/index" class="logo"> Keirran Blackley </a> </h2>
+            <nav>
+                <ul>
+                    <li> <a href="/index" class="active"> Home </a> </li>
+                    <li> <a href="/portfolio"> Portfolio </a> </li>
+                </ul>
+            </nav>
+        </header>
 
-		      <nav>
-			  <li> <a href="#experience"> Expereice </a> </li>
-			  <li> <a href="#education"> Education </a> </li>
-			  <li> <a href="#licences"> Licences </a> </li>
-			  <li> <a href="#projects"> Projects </a> </li>
-		      </nav>
-	    </header>
-		
-		<span class="icon" onclick="openNav()"> <i class="fa-solid fa-bars"></i> </span>
-			<div id="fullNav" class="overlay">
-			    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-			    <div class="overlay-content">
-				<a href="/index"> Keirran Blackley </a>
-				<ul>
-				    <h3> Projects </h3>
-				    <li> <a href="/budgley"> Budgley </a> </li>
-				    <li> <a href="/raspkei"> Raspkei </a> </li>
-				</ul>
-			    </div>
-			</div>
-
-        <div class="container-flex">
-
-          <div id="experience">
-            <div class="card">
-                <span class="tag"> Experience </span>
-                <small> 2023 </small>
-                <h4> Electrical / Electronics </h4>
-                <p> Planning to find a job in electrical and electronics again to start my career path as a technician. </p>
-            </div>
-
-            <div class="card">
-                <span class="tag"> Experience </span>
-                <small> 2022 </small>
-                <h4> Roller Door / Electrical Apprentice </h4>
-                <p> Worked with a small company to service and install roller doors, shutters. Usually serviced old lighting fixtures, fans and HVAC systems in between jobs. </p>
-            </div>
-
-            <div class="card">
-                <span class="tag"> Experience </span>
-                <small> 2019 </small>
-                <h4> Light Vehicle Mechanic Apprentice </h4>
-                <p> Serviced and maintained common consumer cars. Fuild checks, filter replacements, intake cleaners. </p>
-            </div>
-
-            <div class="card">
-                <span class="tag"> Experience </span>
-                <small> 2018 </small>
-                <h4> Electronics Security Technician Apprentice </h4>
-                <p> Installed and serviced a range of security equipment such as CCTV, E-Strike locks, sensors, alarms and more. </p>
-              <p> Worked mainly with Cisco/AXIS and Gallagher products. </p>
-            </div>
-          </div>
-
-          <div id="education">
-            <div class="card">
-                <span class="tag"> Education </span>
-                <small> 2023 </small>
-                <h4> Certificate III in Electrical </h4>
-                <p>  </p>
-            </div>
-
-            <div class="card">
-                <span class="tag"> Education </span>
-                <small> 2015</small>
-                <h4> Certificate II in Commucations </h4>
-                <p>  </p>
-            </div>
-
-            <div class="card">
-                <span class="tag"> Education</span>
-                <small> 2015 </small>
-                <h4> Certificate II in Workplace Health and Safety </h4>
-                <p>  </p>
-            </div>
-
-            <div class="card">
-                <span class="tag"> Education </span>
-                <small> 2015 </small>
-                <h4> Record of Student Achievement </h4>
-                <p> Completed Year 10 at Bass High School. </p>
-            </div>
-          </div>
-
-          <div id="licences">
-            <div class="card">
-                <span class="tag"> Licence </span>
-                <small> 2022 </small>
-                <h4> EWP Operators Ticket / Yellow Card </h4>
-                <p> Vertical Lift (VL), Scissor Lift (SL), Boom Lift under 11 meters (BL) </p>
-            </div>
-
-            <div class="card">
-                <span class="tag"> Licence </span>
-                <small> 2022 </small>
-                <h4> Car Provisional 1 </h4>
-                <p>  </p>
-            </div>
-
-            <div class="card">
-                <span class="tag"> Licence </span>
-                <small> 2022 </small>
-                <h4> Motorbike Provisional 1 </h4>
-                <p> Yamaha R15 2013 </p>
-            </div>
-
-            <div class="card">
-                <span class="tag"> Licence </span>
-                <small> 2017 </small>
-                <h4> White Card </h4>
-                <p> Work Safely in the Construction Industry </p>
-            </div>
-          </div>
-
-          <div id="projects">
-            <div class="card">
-                <span class="tag"> Project </span>
-                <small> 2022 </small>
-                <h4> Budgley </h4>
-                <p> A small scale budget platform designed to help organise and manage payments. </p>
-            </div>
-
-            <div class="card">
-                <span class="tag"> Project </span>
-                <small> 2022 </small>
-                <h4> Raspkei </h4>
-                <p> An open source project for the Raspberry Pi system. Based around python3 and uses relays, inputs and internet to work. </p>
-            </div>
-            
-          </div>
+        <div id="cover">
+            <h1> Electronics Technician </h1>
+            <h1> Developer </h1>
+            <h1> Mechanic </h1>
         </div>
-		
-		<script>
-		    function openNav() {
-			document.getElementById("fullNav").style.height = "100%";
-		    }
 
-		    function closeNav() {
-			document.getElementById("fullNav").style.height = "0%";
-		    }
-		</script>
 
-		<script src="https://kit.fontawesome.com/bb6eaecf68.js" crossorigin="anonymous"></script>
-	</body>
+        <footer>
+            <p> Keirran Blackley. Copyright (c) 2022-20xx.</p>
+        </footer>
+    </body>
 </html>
