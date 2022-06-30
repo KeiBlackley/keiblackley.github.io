@@ -28,4 +28,5 @@ footer { width: 100%; margin: auto; text-align: center; padding: 40px; }
 
 @media only screen and (max-width: 768px) {
   header nav { float: left; }
+  #cover { padding: 80px; }
 }
