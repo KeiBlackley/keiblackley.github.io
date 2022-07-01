@@ -20,7 +20,8 @@ ul { list-style-type: none; }
 header { background-color: var(--darkBlue); color: var(--white); padding: 40px; width: 100%; overflow: auto; }
 header .logo { float: left; }
 header nav { float: right; }
-header nav li { margin: 5px 0; margin-right: 20px; display: inline-block; }
+header nav li { margin: 5px 0px; margin-right: 20px; display: inline-block; }
+header nav.socials { margin-right: 10px; }
 
 #cover { padding: 160px; background-color: var(--darkBlue); color: var(--white); }
 #cover h1 { margin: 20px; }
