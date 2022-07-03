@@ -48,7 +48,7 @@ header nav.socials { margin-right: 10px; }
 nav.socials li { display: inline-block; margin: 10px; }
 nav button { width: auto; }
 
-#cover { padding: 160px 80px; background-color: var(--darkBlue); color: var(--white); }
+#cover { padding: 80px; background-color: var(--darkBlue); color: var(--white); }
 #cover::after {
 	content: "";
   	clear: both;
