@@ -10,47 +10,114 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <script src="https://kit.fontawesome.com/bb6eaecf68.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
         <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png">
         <link href="/assets/css/global.css" rel="stylesheet" text="text/css" />
     </head>
     <body>
-
         <header>
-            <h2> <a href="/index" class="logo"> Keirran Blackley </a> </h2>
-            
-            <nav>
-                <ul>
-                    <li> <a href="/index" class="active"> Home </a> </li>
-                    <li> <a href="/keirepair"> Repair </a> </li>
-                    <li> <button onclick="window.location.href='tel:+61480183947'"> Call Now </button> </li>
-                </ul>
-            </nav>
+            <div class="logo">
+               <h1> Keirran Blackley </h1>
+                <p> Electronics Technician </p>
+            </div>
         </header>
 
-        <div id="cover">
-            <div class="headline">
-                <h1> Electronics Technician </h1>
-                <h1> Developer </h1>
-                <h1> Mechanic </h1>
-            </div>        
-            <div class="content">
-                <button onclick="window.location.href='portfolio'"> View Portfolio </button>
-            </div>    
-        </div>
+        <nav class="responsiveNav" id="responsiveNav">
+            <a href="/index" class="active"> Home </a>
+            <a href="tel:+61480183947" class="btn">Contact</a>
 
+            <span class="icon" onclick="responsiveNav()">
+            <i class="fa-solid fa-bars"></i> </span>
+        </nav>
+
+        <main>
+            
+            <div id="slides">
+                <div class="slide">
+                    <h2> Experience </h2>
+
+                    <div class="wrapper">
+                        <p> History working with mobile devices for servicing and repair. </p>
+                        <p> Previous experience with security equipment including CCTV, T10-T15 card readers and alarm systems. </p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <h2> Education </h2>
+
+                    <div class="wrapper">
+                        <p> Currently studies in electronics and communications </p>
+                        <p> Prior TAFE knowledge of VisualBasic applications and fibre optic splicing.  </p>
+                        <p> Certificates in communications and workplace health & safety. </p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <h2> Licences </h2>
+
+                    <div class="wrapper">
+                        <p> Drivers and Riders licence supplied by the NSW RMS. </p>
+                        <p> White Card for work safe in the costruction industry. </p>
+                    </div>
+                </div>
+                
+                <div onclick="plusSlides(-1)" class="prev"> Previous </div>
+                <div onclick="plusSlides(1)" class="next"> Next</div>
+            </div>
+
+        
+
+        </main>
 
         <footer>
             <p> Keirran Blackley </p>
             <p> Copyright (c) 2022-20xx. </p>
             <nav class="socials">
                 <ul>
-                    <li> <a href="http://facebook.com/KeiBlackley" target="_blank"> <i class="fa-brands fa-facebook"></i> </a> </li>
-                    <li> <a href="http://instagram.com/KeiBlackley" target="_blank"> <i class="fa-brands fa-instagram"></i> </a> </li>
-                    <li> <a href="http://twitter.com/KeiBlackley" target="_blank"> <i class="fa-brands fa-twitter"></i> </a> </li>
-                    <li> <a href="http://linkedin.com/in/KeiBlackley" target="_blank"> <i class="fa-brands fa-linkedin"></i> </a> </li>
+                    <li> <a href="http://facebook.com/KeiBlackley"> <i class="fa-brands fa-facebook"></i> </a> </li>
+                    <li> <a href="http://instagram.com/KeiBlackley"> <i class="fa-brands fa-instagram"></i> </a> </li>
+                    <li> <a href="http://twitter.com/KeiBlackley"> <i class="fa-brands fa-twitter"></i> </a> </li>
+                    <li> <a href="http://linkedin.com/in/KeiBlackley"> <i class="fa-brands fa-linkedin"></i> </a> </li>
                 </ul>
             </nav>
         </footer>
+
+        <script>
+            // Responsive Nav
+            function responsiveNav() {
+                var x = document.getElementById("responsiveNav");
+                if (x.className === "responsiveNav") x.className += " responsive";
+                else x.className = "responsiveNav";
+            }
+
+            // Slideshow
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("slide");
+              if (n > slides.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = slides.length}
+              if ($(window).width() > 768) {
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+              }
+              slides[slideIndex-1].style.display = "block";
+
+            }
+        </script>
+
+
     </body>
 </html>
