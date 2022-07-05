@@ -127,18 +127,13 @@ main { text-align: center; }
   Slides
 */
 #slides { overflow: hidden; margin: 60px; }
-.slide { animation-name: opac; animation-duration: 3s; float: center; width: 33%; margin: 40px auto; padding: 40px; border: 3px solid var(--lightBlue); border-radius: 5px; }
+.slide { animation-name: opac; animation-duration: 3s; float: center; width: 60%; margin: 40px auto; padding: 40px; border: 3px solid var(--lightBlue); border-radius: 5px; }
+.slide:not-first { display:; }
 .slide:hover { animation-name: opac; animation-duration: 3s; background-color: var(--lightBlue); color: var(--darkBlue); }
-.prev, .next { margin: 160px; color: var(--white); cursor: pointer; position: absolute; top: 50%; width: auto; padding: 16px; font-weight: bold; font-size: 18px; transition: 0.6s ease; border-radius: 0 3px 3px 0; user-select: none; }
-.next { right: 0; border-radius: 3px 0 0 3px; }
-.prev:hover, .next:hover { color: var(--darkBlue); background-color: var(--lightBlue); border-radius: 5px; }
-.slide .wrapper {
-  padding: 20px;
-}
+.slide .wrapper { padding: 20px; }
 @media screen and (max-width: 1200px) {
-  .prev, .next { display: none; }
   #slides { overflow: visible; }
-  .slide { width: 100%; height: auto; }
+  .slide { width: 80%; height: auto; }
 }
 
 /*
