@@ -70,7 +70,7 @@ header {
 header .logo { float: left; }
 header .bio { float: right; margin-top: 25px; }
 @media screen and (max-width: 768px) {
-  header { padding: 30px; }
+  header { padding: 30px; width: 100%; border-radius: 0; margin: 60px 0; }
   header .bio { float: left; }
 }
 
@@ -132,8 +132,8 @@ main { text-align: center; }
 .slide:hover { animation-name: opac; animation-duration: 3s; background-color: var(--lightBlue); color: var(--darkBlue); }
 .slide .wrapper { padding: 20px; }
 @media screen and (max-width: 1200px) {
-  #slides { overflow: visible; }
-  .slide { width: 80%; height: auto; }
+  #slides { overflow: visible; margin: 20px; }
+  .slide { width: 100%; height: auto; margin: 40px 0;  }
 }
 
 /*
