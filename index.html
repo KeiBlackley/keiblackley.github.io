@@ -13,36 +13,60 @@
 
         <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png">
         <link href="/assets/css/global.css" rel="stylesheet" text="text/css" />
+        <link href="/assets/css/main.css" rel="stylesheet" text="text/css" />
     </head>
     <body>
+        <div id="responsiveNav" class="responsiveNav">
+            <a href="/index"> About </a>
+            <a href="/projects"> Projects </a>
+            <a href="tel:+61480183947"> Contact </a>
+            
+            <a href="javascript:void(0);" class="icon" onclick="responsiveNav()"> Menu <i class="fa-solid fa-bars"></i> </a>
+        </div>
+
         <header>
-            <a href="/index">
-                <h1> Keirran Blackley </h1>
-                <p> Technician & Developer </p> 
-            </a>
+            <h1> Keirran Blackley </h1>
+            <p> Electronics Technician & Aspiring Developer </p>
         </header>
 
         <main>
+            <div id="container">
+                <div class="content">
+                    <p> I'm a locksmithing student at TAFE NSW specialising in security systems with plans to study engineering in the next steps of my career. </p>
+
+                    <p> I started in electronic security and am now working as an apprentice locksmith with electronic security aspects. </p>
+
+                    <p> When I'm not working, I focus on my hobbies which are: web and software development, mechanics and growing my network by meeting people. </p>
+                </div>
+            </div>
+            
+            <h2> What I Do </h2>
             <div id="cards">
-                <div class="card" style="background-color: var(--blue)">
+                <div class="card">
                     <h2> Locks & Security </h2>
                     <p> Currently studying in a 4 year apprenticeship to become a security technician. This includes knowledge of installing and servicing alarms, access control, CCTV, intercom systems, and wireless networks aswell as general locksmithing. </p>
                 </div>
-                <div class="card" style="background-color: black">
+                <div class="card">
                     <h2> Mobile Repair </h2>
                     <p> From running tests to access functionality, install and update phone software, troubleshoot wiring and circuit problems, and replace damaged parts such as batteries, screens and cameras. </p>
                 </div>
-                <div class="card" style="background-color: var(--darkBlue)">
+                <div class="card">
                     <h2> Mechanics </h2>
                     <p> Prior experience as an apprentice learning minor and major servicing. This includes fluid changes, brake and suspension servicing and basic auto electrical. </p>
                     <p> Currently a hobbyist working on a Yamaha R15 and light vehicles. </p>
                </div>
+               <div class="card">
+                    <h2> Web-Based Technologies </h2>
+                    <p> Learning developmental skills in web technologies as a full stack developer with projects such as KeiCMS, Budget Plan and Raspkei. </p>
+                </div>
             </div>
         </main>
 
         <footer>
-            <p> Copyright &copy; 2022. </p>
             <p> Keirran Blackley. </p>
+            <p> Copyright &copy; 2022. </p>
         </footer>
+
+        <script src="/assets/js/responsiveNav.js"></script>
     </body>
 </html>

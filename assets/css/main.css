@@ -1,0 +1,35 @@
+#container { background-color: #ddd; margin: 20px auto; padding: 40px; }
+#container .header { text-align: center; margin-bottom: 20px; }
+#container .content { width: 60%; margin: auto; }
+
+#cards {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  justify-content: center;
+}
+
+.card {
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px 1.5%;
+  background-color: var(--black);
+  color: var(--white);
+  box-shadow: 0 0 10px #888888;
+}
+
+.card:nth-of-type(even) {
+  grid-column-start: 2;
+}
+
+.card:hover {
+  box-shadow: none;
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 1200px) {
+  #cards { display: block; }
+}
+
+@media screen and (max-width: 768px) {
+  #container .content { width: 80%; }
+}
