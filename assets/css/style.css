@@ -1,0 +1,43 @@
+.icon { font-size: 18px; }
+.dynamic-content { display: none; }
+
+#footer { text-align: center; width: 100%; padding: 40px; }
+#footer li { display: inline-block; }
+
+.wrapper { 
+	width: 90%; 
+	min-width: 80%; 
+	max-width: 640px; 
+	margin: 40px auto; 
+	padding: 10px;
+	position: relative;
+}
+
+.seperator {
+	background-color: var(--black);
+	color: var(--white);
+	padding: 2.5px;
+	border-radius: 5px;
+	margin: 40px auto;
+}
+
+#header {
+	width: 100%;
+	padding: 40px 80px 40px 80px;
+	font-size: x-large;
+}
+
+#nav { 
+	float: center;
+	margin: 20px 60px;
+}
+
+#footer {
+	font-size: small;
+	text-align: center;
+	padding: 40px;
+}
+
+@media screen and (max-width: 768px) {
+	#header { text-align: center; }
+}

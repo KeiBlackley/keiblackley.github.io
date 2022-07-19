@@ -4,69 +4,68 @@
         <title> Keirran Blackley </title>
 
         <meta charset="UTF-8">
-        <meta name="description" content="Portfolio Website • Created by Keirran Blackley.">
+        <meta name="description" content="Main Website • Created by Keirran Blackley.">
         <meta name="keywords" content="Keirran Blackley, Keirran, Blackley, Kei Blackley, Kei, KeiBlackley">
         <meta name="author" content="Keirran Blackley">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <script src="https://kit.fontawesome.com/bb6eaecf68.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-        <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png">
-        <link href="/assets/css/global.css" rel="stylesheet" text="text/css" />
-        <link href="/assets/css/main.css" rel="stylesheet" text="text/css" />
+        <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
+        <link href="assets/css/global.css" rel="stylesheet" text="text/css" />
+        <link href="assets/css/style.css" rel="stylesheet" text="text/css" />
+        <link href="assets/css/responsiveNav.css" rel="stylesheet" text="text/css" />
+        <link href="assets/css/loader.css" rel="stylesheet" text="text/css" />
+
     </head>
-    <body>
-        <div id="responsiveNav" class="responsiveNav">
-            <a href="/index"> About </a>
-            <a href="/projects"> Projects </a>
-            <a href="tel:+61480183947"> Contact </a>
-            
-            <a href="javascript:void(0);" class="icon" onclick="responsiveNav()"> Menu <i class="fa-solid fa-bars"></i> </a>
-        </div>
+    <body onload="load()">
 
-        <header>
-            <h1> Keirran Blackley </h1>
-            <p> Electronics Technician & Aspiring Developer </p>
-        </header>
+        <div id="loader">
+            <div class="header">
+                <p> Locksmith </p>
+                <h1> KEIRRAN BLACKLEY </h1>
+                <p> Technician • Developer </p>
+            </div> <!-- .header -->
 
-        <main>
-            <div id="container">
-                <div class="content">
-                    <p> I'm a locksmithing student at TAFE NSW specialising in security systems with plans to study engineering in the next steps of my career. </p>
+            <div id="loading"></div>
+        </div> <!-- #loader -->
 
-                    <p> I started in electronic security and am now working as an apprentice locksmith with electronic security aspects. </p>
+        <div id="page">
 
-                    <p> When I'm not working, I focus on my hobbies which are: web and software development, mechanics and growing my network by meeting people. </p>
-                </div>
+            <div id="nav">
+                <div id="responsiveNav" class="responsiveNav">
+                    <a href="/index"> Home </a>
+
+                    <a href="http://linkedin.com/in/KeiBlackley" class="btn"> <i class="fa-brands fa-linkedin"></i> LinkedIn </a>
+                    <a href="tel:+61480183947" class="btn"> <i class="fa-solid fa-phone"></i> Call </a>
+
+                    <a onclick="responsiveNav()" class="icon"> <i class="fa-solid fa-bars"></i> </a>
+                </div> <!-- #responsiveNav -->
+            </div> <!-- #nav -->
+
+            <div id="header">
+                <p> Hi I'm, </p>
+                <h1> Keirran Blackley. </h1>
+                <p> Locksmith, Technician, Developer. </p>
+            </div>  <!-- #header -->
+
+            <div class="wrapper">
+                <p> Currently studying in a 4 year apprenticeship to become a security technician in the locksmithing industry. This includes knowledge of installing and servicing intercom systems, wireless networks aswell as commerical, residental and automotive locksmithing. </p>
+                <br/>
+                <p> Previous experience ranges from device repair, security equipment installation and web development. </p>
+                <br/>
+                <p> When I'm not working, I focus on my hobbies which are: web and software development, mechanics and growing my network by meeting people. </p>
+            </div> <!-- .wrapper -->
+
+            <div id="footer">
+                <p> Keirran Blackley. Copyright &copy; 2022. </p>
             </div>
-            
-            <h2> What I Do </h2>
-            <div id="cards">
-                <div class="card">
-                    <h2> Locks & Security </h2>
-                    <p> Currently studying in a 4 year apprenticeship to become a security technician. This includes knowledge of installing and servicing alarms, access control, CCTV, intercom systems, and wireless networks aswell as general locksmithing. </p>
-                </div>
-                <div class="card">
-                    <h2> Mobile Repair </h2>
-                    <p> From running tests to access functionality, install and update phone software, troubleshoot wiring and circuit problems, and replace damaged parts such as batteries, screens and cameras. </p>
-                </div>
-                <div class="card">
-                    <h2> Mechanics </h2>
-                    <p> Prior experience as an apprentice learning minor and major servicing. This includes fluid changes, brake and suspension servicing and basic auto electrical. </p>
-                    <p> Currently a hobbyist working on a Yamaha R15 and light vehicles. </p>
-               </div>
-               <div class="card">
-                    <h2> Web-Based Technologies </h2>
-                    <p> Learning developmental skills in web technologies as a full stack developer with projects such as KeiCMS, Budget Plan and Raspkei. </p>
-                </div>
-            </div>
-        </main>
 
-        <footer>
-            <p> Keirran Blackley. </p>
-            <p> Copyright &copy; 2022. </p>
-        </footer>
+        </div> <!-- #page -->
 
-        <script src="/assets/js/responsiveNav.js"></script>
+        <script type="text/javascript" src="assets/js/loader.js"></script>
+        <script type="text/javascript" src="assets/js/responsiveNav.js"></script>
+
     </body>
 </html>
