@@ -1,3 +1,24 @@
+#cards {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+}
+
+/* stylings are setup individually */
+.card {
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.card:nth-of-type(even) {
+  grid-column-start: 2;
+}
+
+@media screen and (max-width: 1200px) {
+  #cards { display: block; }
+}
+
 .icon { font-size: 18px; }
 .dynamic-content { display: none; }
 
