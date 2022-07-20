@@ -1,5 +1,5 @@
 .responsiveNav { overflow: auto; }
-.responsiveNav a { float: left; padding: 10px 20px; }
+.responsiveNav a { float: left; padding: 20px; }
 .responsiveNav a:hover { background-color: var(--black); color: var(--white); }
 .responsiveNav .icon { display: none; cursor: pointer; }
 .responsiveNav .btn { float: right; }
