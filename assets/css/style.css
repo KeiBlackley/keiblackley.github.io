@@ -1,0 +1,40 @@
+#cards {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  justify-content: center;
+}
+
+/* stylings are setup individually */
+.card {
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.card:nth-of-type(even) {
+  grid-column-start: 2;
+}
+
+@media screen and (max-width: 1200px) {
+  #cards { display: block; }
+}
+
+.icon { font-size: 18px; }
+.dynamic-content { display: none; }
+
+.wrapper { 
+	width: 90%; 
+	min-width: 80%; 
+	max-width: 640px; 
+	margin: 40px auto; 
+	padding: 10px;
+	position: relative;
+}
+
+.seperator {
+	background-color: var(--black);
+	color: var(--white);
+	padding: 2.5px;
+	border-radius: 5px;
+	margin: 40px auto;
+}
