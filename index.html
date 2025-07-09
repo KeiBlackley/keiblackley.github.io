@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title> Keirran Blackley </title>
+        <title> @ KeiBlackley </title>
 
         <meta charset="UTF-8">
         <meta name="description" content="GitHub hosted website, outlining some of the projects and resources by Keirran Blackley.">
@@ -10,50 +10,65 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <script src="https://kit.fontawesome.com/bb6eaecf68.js" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/byliuyang/github-stats@0.0.4/src/github-stats.js"></script>
 
-        <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
+        <link rel="icon" type="image/x-icon" href="assets/img/avatar_favicon.ico">
         <link href="assets/css/global.css" rel="stylesheet" text="text/css" />
         <link href="assets/css/style.css" rel="stylesheet" text="text/css" />
-        <link href="assets/css/responsiveNav.css" rel="stylesheet" text="text/css" />
+        <link href="assets/css/responsive_nav.css" rel="stylesheet" text="text/css" />
         <link href="assets/css/loader.css" rel="stylesheet" text="text/css" />
 
     </head>
     <body onload="load()">
 
         <div id="loader">
-            <div class="header">
+            <div class="header fade">
+                <img src="assets/img/avatar_alpha.png" alt="Kei" class="logo" />
                 <p> Loading... </p>
             </div> <!-- .header -->
         </div> <!-- #loader -->
 
         <div id="page">
+           
+          <header class="site-header">
+            <div class="container">
+              <h1 class="logo">KeiBlackley</h1>
+              <nav class="site-nav">
+                <ul>
+                  <li><a href="index">Home</a></li>
+                  <li><a href="https://github.com/KeiBlackley">GitHub</a></li>
+                </ul>
+              </nav>
+            </div>
+          </header>
 
-            <header>
-                <p> Hi I'm, </p>
-                <h1> Keirran Blackley. </h1>
-                <p> Developer, Technician, Apprentice </p>
-            </header>
+          <main>
+            <section class="hero">
+              <div class="container">
+                <h2> Projects Overview </h2>
+                <p> GitHub hosted website for outlining major projects for the user KeiBlackley. </p>
+              </div>
+            </section>
 
-            <div class="wrapper">
-                <p> Currently studying in a 4 year apprenticeship to become a security technician in the locksmithing industry. This includes knowledge of installing and servicing intercom systems, wireless networks aswell as commerical, residental and automotive locksmithing. </p>
-                <br/>
-                <p> Previous experience ranges from device repair, security equipment installation and web development. </p>
-                <br/>
-                <p> When I'm not working, I focus on my hobbies which are: web and software development, mechanics and growing my network by meeting people. </p>
+           <!--  <section id="features" class="features">
+              <div class="container grid-3">
+                <article class="feature-card">
+                  <h3> Title </h3>
+                  <p> Description </p>
+                </article>
+              </div>
+            </section> -->
+          </main>
 
-                <br/><br/>
-                <a href="https://keirranblackley.com"> Visit Website </a>
-            </div> <!-- .wrapper -->
-
-            <footer>
-                <p> Keirran Blackley. Copyright &copy; 2022. </p>
-            </footer>
+          <footer class="site-footer">
+            <div class="container">
+              <p> All rights reserved. &copy; 2025 KeiBlackley. </p>
+            </div>
+          </footer>
 
         </div> <!-- #page -->
 
         <script type="text/javascript" src="assets/js/loader.js"></script>
-        <script type="text/javascript" src="assets/js/responsiveNav.js"></script>
-
+        <script src="https://kit.fontawesome.com/608e27d96a.js" crossorigin="anonymous"></script>
     </body>
 </html>

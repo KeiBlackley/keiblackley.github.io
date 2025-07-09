@@ -19,13 +19,12 @@
 
 ## About The Project
 
-StoreStock is a ServiceM8 add-on that introduces a range of new features including but not limited to; material allocation areas, material low stock list and a material unassigned list. The use of there features are outlined below.
-While this system is being developed as a private application, we plan to introduce this as a public release in the coming months. This means StoreStock will be implemented into the ServiceM8 system.
+This is a GitHub hosted website, used to outline major projects published by me ([KeiBlackley](https://github.com/KeiBlackley).
 
 ### Built With
 
-* HTML, CSS3, JS
-* jQuery
+* HTML, CSS, JS
+* jQuery (on occasion)
 
 ## Getting Started
 

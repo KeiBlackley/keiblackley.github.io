@@ -1,48 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
 :root {
-  --lightBlue: #e7eff4;
-  --navyBlue: #003454;
-  --darkBlue: #132a37;
-  --white: whitesmoke;
-  --black: #2a2d39;
+  --col-github: #282828;
+  
+  --col-link: dodgerblue;
+  --col-logo: #003454;
+  
+  --col-black: #2a2d39;
+  --col-lgrey: #EAEDF1;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
+
 html, body {
-  font-family: "Poppins", sans-serif;
-  background-color: var(--white);
-  color: var(--black);
-  animation: opac 0.5s;
+  font-family: "Quicksand", sans-serif;
+  background-color: var(--col-lgrey);
+  color: var(--col-black);
+  animation: fadeIn 1s;
 }
+
+ul { list-style-type: none; }
+
+img { max-width: 100px; }
+
+h1, h2 { font-family: "Lato", sans-serif; }
 
 a:link, a:visited { display: block; color: inherit; text-decoration: inherit; }
 a:hover { opacity: 0.5; }
 
-ul { list-style-type: none; }
-li { margin: 10px; }
 
-header {
-  width: 90%;
-  margin: auto;
-  padding: 80px 80px 40px 80px;
-  font-size: x-large;
-}
-
-footer {
-  font-size: small;
-  text-align: center;
-  padding: 40px;
-}
-footer li { display: inline-block; }
-
-@media screen and (max-width: 768px) {
-  header { text-align: center; }
-}
-
-@media screen and (max-width: 768px) {
-}
-
-@keyframes opac {
-  from { opacity:0 } 
-  to { opacity:1 }
-}
+.clear:after { content: ""; display: table; clear: both; }
