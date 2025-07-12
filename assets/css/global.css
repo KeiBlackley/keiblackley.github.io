@@ -33,6 +33,6 @@ img { max-width: 100px; }
 h1, h2 { font-family: "Lato", sans-serif; }
 
 a:link, a:visited { display: block; color: var(--link-colour); text-decoration: inherit; }
-a:hover { opacity: 0.9; }
+a:hover { color: var(--col-black); opacity: 0.8; }
 
 .clear:after { content: ""; display: table; clear: both; }

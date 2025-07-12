@@ -35,9 +35,9 @@ header {
 
 header .title { font-size: 1.5rem; color: var(--col-logo); }
 
-header nav { margin: 10px auto; }
+header nav { margin: 8px auto; }
 header nav ul { list-style: none; display: flex; gap: 20px; }
-header nav a { font-weight: 500; transition: color 0.3s ease;  }
+header nav a { margin-top: 8px; font-weight: 500; transition: color 0.3s ease;  }
 header nav a:hover { color: var(--col-logo); }
 
 /* COVER */
