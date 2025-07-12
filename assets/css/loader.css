@@ -18,9 +18,7 @@
 }
 #loader .header { text-align: center; }
 #loader .header h1 { font-size: 72px; }
-#loader .header .logo {
-
-}
+#loader .header .logo { width: 100px; }
 
 #loading {
   width: 60px;
@@ -49,4 +47,20 @@
 @keyframes fade {
   0%,100% { opacity: 0 }
   50% { opacity: 1 }
+}
+
+.donut {
+  float:left;
+  border: 4px solid rgba(0, 0, 0, 0.2);
+  border-left-color: var(--col-main);
+  margin: 2rem 3rem;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: donut-spin 1s linear infinite;
+  border-style:dotted;
+}
+@keyframes donut-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

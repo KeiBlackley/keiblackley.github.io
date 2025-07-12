@@ -1,38 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Lato:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 :root {
-  --text-colour: #333;
-  --link-colour: dodgerblue;
-  --col-logo: #003454;
-  --col-black: #2a2d39;
-  --col-lgrey: #EAEDF1;
-  
-  --bg-light: #f9fafb;
-  --bg-dark: #ffffff;
-  
-  --accent: #6366f1;
-  --radius: 8px;
-  --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+	--col-main: #003454;
+	--col-link: #007ecc;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-html, body {
-  font-family: "Quicksand", sans-serif;
-  background: var(--bg-light);
-  color: var(--text-colour);
-  line-height: 1.6;
-  animation: fadeIn 1s;
+html {
+	font-family: "Quicksand", sans-serif;
 }
 
-ul { list-style-type: none; }
-
-img { max-width: 100px; }
-
-h1, h2 { font-family: "Lato", sans-serif; }
-
-a:link, a:visited { display: block; color: var(--link-colour); text-decoration: inherit; }
-a:hover { opacity: 0.9; }
-
-.clear:after { content: ""; display: table; clear: both; }
+a, a:visited { color: inherit; text-decoration: inherit; }
