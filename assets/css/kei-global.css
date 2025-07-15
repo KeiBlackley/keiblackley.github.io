@@ -9,22 +9,19 @@
   --col-white: #f8f2f3;
   --col-litewhite: #cedfd9;
   
-  --col-grey: #adb5bd;
-  --col-litegray: #ced4da;
-  --col-darkgray: #495057;
+  --col-grey: #555;
+  --col-litegray: #eee;
+  --col-darkgray: #333;
   
   --col-green: #00C950;
   --col-liteblue: #dbeafe;
-
-  --bg-lite: #eee;
-  --bg-dark: #333;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
    font-family: "Lato", sans-serif;
-   background-color: var(--bg-lite);
+   background-color: var(--col-litegray);
    color: var(--col-kei-blue);
 }
 
