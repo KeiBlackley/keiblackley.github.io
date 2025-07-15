@@ -147,6 +147,15 @@ button.alpha {
    border: 1px solid white;
 }
 
+section {
+  background: var(--col-kei-blue);
+  color: whitesmoke;
+  padding: 100px 20px;
+  text-align: center;
+}
+section h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+section p { font-size: 1.2rem; margin-bottom: 2rem; }
+
 footer {
    background-color: var(--col-litegray);
    color: var(--col-darkgray);
