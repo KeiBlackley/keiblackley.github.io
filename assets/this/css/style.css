@@ -15,7 +15,7 @@
 .btn {
   display: inline-block;
   background: white;
-  color: var(--col-logo);
+  color: var(--col-kei-blue);
   padding: 12px 30px;
   border-radius: var(--radius);
   text-decoration: none;
@@ -33,16 +33,16 @@ header {
   padding: 20px 0;
 }
 
-header .title { font-size: 1.5rem; color: var(--col-logo); }
+header .title { font-size: 1.5rem; color: var(--col-kei-blue); }
 
 header nav { margin: 8px auto; }
 header nav ul { list-style: none; display: flex; gap: 20px; }
 header nav a { margin-top: 8px; font-weight: 500; transition: color 0.3s ease;  }
-header nav a:hover { color: var(--col-logo); }
+header nav a:hover { color: var(--col-kei-blue); }
 
 /* COVER */
 .cover {
-  background: var(--col-logo);
+  background: var(--col-kei-blue);
   color: whitesmoke;
   padding: 100px 20px;
   text-align: center;
