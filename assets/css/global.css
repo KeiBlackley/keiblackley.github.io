@@ -42,13 +42,13 @@ clear: both;
 
 
 /* lists */
-ul {
+ul.styled {
     list-style-type: none;
     padding: 0;
     margin: 20px auto;
 }
 
-ul li {
+ul.styled li {
   border: 1px solid #ddd;
   margin-top: -1px; /* Prevent double borders */
   background-color: #f6f6f6; 
@@ -57,7 +57,7 @@ ul li {
   color: #000; 
   display: block;
 }
-ul li:hover:not(.header) { background-color: #eee; }
+ul.styled li:hover:not(.header) { background-color: #eee; }
 
 
 
