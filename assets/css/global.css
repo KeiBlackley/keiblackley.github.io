@@ -3,9 +3,9 @@
 
 .row { display: flex; }
 .row:after {
-content: "";
-display: table;
-clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .column { float: left; margin: var(--spacing-l) auto; }
@@ -78,8 +78,8 @@ th:hover { color: #000; }
 
 
 /* images */
-img { transition: all 0.5s ease; margin: var(--normal-spacing) auto; max-width: 100%; border: 1px solid var(--primary); border-radius: 4px; }
-img:hover { border: 0; }
+img { transition: all 0.5s ease; max-width: 100%; }
+img:hover { border: 0; border: 1px solid var(--primary); border-radius: 4px; }
 
 
 
