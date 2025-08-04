@@ -1,0 +1,25 @@
+
+:root {
+    --normal-padding: 8px 16px;
+  
+    --footer-bg-colour: #000;
+    --footer-colour: #fff;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
+
+footer {
+    background-color: var(--footer-bg-colour);
+    color: var(--footer-colour);
+    padding: var(--normal-padding);
+    width: 100%;
+    text-align: right;
+}
