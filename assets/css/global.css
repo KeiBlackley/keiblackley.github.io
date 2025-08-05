@@ -44,7 +44,7 @@
 .align-center { text-align: center; }
 .transparent { background: transparent; }
 .full-screen { width: 100%; height: 100vh; }
-
+.padded { padding: 16px; }
 
 
 
