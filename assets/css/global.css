@@ -98,11 +98,6 @@ ul.styled { list-style-type: none; padding: 0; }
 .padded { padding: 8px; }
 .padded-large { padding: 20px; }
 
-.reset { margin: 0; padding: 0; border: 0; outline: 0; color: inherit; text-decoration: inherit; }
-
-
-
-
 :root {
     --normal-spacing: 8px;
     --large-spacing: 16px;
