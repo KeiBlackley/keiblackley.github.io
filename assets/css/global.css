@@ -143,5 +143,4 @@ h1, h2, h3, h4, h5 {
   margin-bottom: 20px;
 }
 
-p { margin: 20px auto; }
 blockquote { border-left: 2px solid var(--primary); border-radius: var(--radius); margin: 20px auto; padding: var(--normal-padding); margin-left: var(--large-spacing); }
