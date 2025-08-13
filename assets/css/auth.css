@@ -1,17 +1,23 @@
+/* auth.css */
+
+/*
+ * Styles forms to a basic design
+*/
 
 :root { 
   --form-main-colour: #003454;
-
-  --checkbox-checkmark-colour: var(--form-main-colour);
-  --form-success-alert: #4CAF50;
-  --form-warning-alert: #ffeb3b;
-  --form-error-alert: #f44336;
+  --form-accent-col: #607d8b;
+  --form-success: #4CAF50;
+  --form-warning: #ffeb3b;
+  --form-error: #f44336;
+  
+  --checkbox-checkmark-colour: var(--form-success); 
 }
 
 .alert { margin-bottom: 16px; padding: 4px 8px; border-radius: 4px; background-color: #607d8b; color: #fff; }
-.alert.error { background-color: var(--form-error-alert); color: #fff; }
-.alert.warning { background-color: var(--form-warning-alert); color: #000; }
-.alert.success { background-color: var(--form-success-alert); color: #fff; }
+.alert.error { background-color: var(--form-error); color: #fff; }
+.alert.warning { background-color: var(--form-warning); color: #000; }
+.alert.success { background-color: var(--form-success); color: #fff; }
 
 form {
     max-width: 400px;
@@ -24,9 +30,6 @@ form {
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     box-sizing: border-box;
 }
-label {
-    font-weight: bold;
-}
 
 input, select, textarea {
   outline: 0;
@@ -38,12 +41,11 @@ input, select, textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  font-size: large;
 }
 
-input[type=submit], button {
+input[type=submit], form button {
   width: 100%;
-  background-color: #607d8b; 
+  background-color: var(--form-accent-col); 
   color: white;
   padding: 14px 20px;
   margin: 16px 0;
@@ -53,7 +55,7 @@ input[type=submit], button {
   transition: background-color 0.5s ease; 
 }
 
-input[type=submit]:hover, button:hover {
+input[type=submit]:hover, form button:hover {
   background-color: var(--form-submit-confirm);
 }
 

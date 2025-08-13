@@ -1,0 +1,130 @@
+<link href="../assets/css/global.css" rel="stylesheet" type="text/css" />
+<link href="../assets/css/auth.css" rel="stylesheet" type="text/css" />
+<link href="../assets/css/tabbed.css" rel="stylesheet" type="text/css" />
+
+<!-- first -->
+<section class="row">
+     <!-- heading -->
+    <div class="column full padded-large">
+        <div class="tabbed">
+            <button class="link" onclick="toggleTab(event, 'Tab1')">Tab 1</button>
+            <button class="link" onclick="toggleTab(event, 'Tab2')">Tab 2</button>
+            <button class="link" onclick="toggleTab(event, 'Tab3')">Tab 3</button>
+        </div>
+    
+        <div class="tabcontent" id="Tab1">
+            <h2> Tab1 </h2>
+        </div>
+
+        <div class="tabcontent" id="Tab2">
+            <h2> Tab2 </h2>
+        </div>
+
+        <div class="tabcontent" id="Tab3">
+            <h2> Tab3 </h2>
+        </div>
+    </div>
+</section> <!-- row -->
+
+<section class="row">
+    <div class="column half">
+        <form method="POST" action="login">
+            <div class="alert"> Form Alert Box. Style with the following: </div>
+            
+            <div class="alert success"> success </div>
+            <div class="alert warning"> warning </div>
+            <div class="alert error"> error </div>
+
+            <label for="username">Text</label>
+            <input type="text" id="username" name="username" placeholder="Account Username">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password">
+
+            <select>
+                <option value="value1"> Option 1 </option>
+                <option value="value2"> Option 2 </option>
+            </select>
+            
+            <label class="checkbox"> Custom check input
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            
+            <label class="checkbox"> Custom radio input
+                <input type="radio">
+                <span class="checkmark"></span>
+            </label>
+            
+            <textarea placeholder="Text Area">
+                
+            </textarea>
+
+            <input type="submit" name="loginSubmit" value="Submit" />
+        </form>
+    </div>
+
+    <div class="column half">
+        <section>
+            <h1> Heading 1 </h1>
+            <h2> Heading 2 </h2>
+            <h3> Heading 3 </h3>
+            <h4> Heading 4 </h4>
+            <h5> Heading 5 </h5>
+        </section>
+
+        <section>
+            <ul class="styled">
+                <h2> .styled List Heading </h2> 
+                <li> This page has an <b>A4</b> size [bold]</li>
+                <li> It lists all the <i>styles</i> [italics]</li>
+                <li> that can be <u>applied to elements</u>. [underline]</li>
+            </ul>
+        </section>
+
+        <section class="row">
+            <!-- unordered list -->
+            <div class="column half">
+                <ul>    
+                    <h3> Unordered List </h3>
+                    <li> List Item </li>
+                    <li> <a href="#"> List Item w/ Link </a> </li>
+                    <li> List Item </li>
+                </ul>
+            </div>
+
+            <!-- unordered list -->
+            <div class="column half">
+                <ul>    
+                    <h3> Unordered List </h3>
+                    <li> List Item </li>
+                    <li> <a href="#"> List Item w/ Link </a> </li>
+                    <li> List Item </li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <table>
+                <tr>
+                    <th> Table </th>
+                    <th> Header </th>
+                </tr>
+                <tr>
+                    <td> Data </td>
+                    <td> Row </td>
+                </tr>
+                <tr>
+                    <td> Row </td>
+                    <td> Data </td>
+                </tr>
+                <tr>
+                    <td> Data </td>
+                    <td> Row </td>
+                </tr>
+            </table>
+        </section>
+    </div>
+</section>
+
+<script src="../assets/scripts/tabbed.js"></script>

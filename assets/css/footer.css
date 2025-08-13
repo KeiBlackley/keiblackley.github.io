@@ -1,10 +1,10 @@
+/* footer.css */
 
-:root {
-    --normal-padding: 8px 16px;
-  
-    --footer-bg-colour: #000;
-    --footer-colour: #fff;
-}
+/*
+ * Bottom positioned footer without using sticky or fixed;
+*/
+
+* { margin:0; padding:0; box-sizing: border-box; }
 
 body {
   display: flex;
@@ -17,9 +17,11 @@ main {
 }
 
 footer {
-    background-color: var(--footer-bg-colour);
-    color: var(--footer-colour);
-    padding: var(--normal-padding);
+    background-color: #000;
+    color: #fff;
+    padding: 16px;
     width: 100%;
     text-align: right;
 }
+
+/* Footer to be styled locally */

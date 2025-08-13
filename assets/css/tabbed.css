@@ -1,12 +1,25 @@
- /* Style the tab */
+/* tabbed.css */
+
+/*
+ * Tabbed content - uses tabbed.js
+*/
+
+:root {
+  --tab-link-active: #003454;
+}
+
+* { margin:0; padding:0; box-sizing: border-box; }
+
+/* Style the tab */
 .tabbed {
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
+  color: #1a1a1a;
 }
 
 /* Style the buttons that are used to open the tab content */
-.tabbed button {
+.tabbed .link {
   background-color: inherit;
   color: #000;
   float: left;
@@ -15,24 +28,24 @@
   border: none;
   outline: none;
   cursor: pointer;
-  padding: var(--normal-padding);
+  padding: 16px;
   transition: 0.5s;
 }
 
 /* Change background color of buttons on hover */
-.tabbed button:hover {
+.tabbed .link:hover {
   background-color: #ddd;
 }
 
 /* Create an active/current tablink class */
-.tabbed button.active {
-  background-color: #ccc;
+.tabbed .link .active {
+  background-color: var(--tab-link-active);
 }
 
 /* Style the tab content */
 .tabcontent {
   display: none;
-  padding: var(--normal-padding);
+  padding: 16px;
   border: 1px solid #ccc;
   border-top: none;
 } 

@@ -1,5 +1,10 @@
-
 /* page.css */
+
+/*
+ * Creates an A4 page layout
+*/
+
+* { margin:0; padding:0; box-sizing: border-box; }
 
 page h1, page h2, page h3, page h4, page h5 { margin-bottom: 16px; }
 page {
