@@ -13,22 +13,36 @@ async function getRepoImage(owner, repo) {
     return null;
 }
 
-async function renderRepoList(repos, owner) {
+async function renderRepoList(repos, owner, filterUsername = false) {
     if (repos.length === 0) return '<p>No repositories found.</p>';
-    const repoItems = await Promise.all(repos.map(async repo => {
+    // Only show repos with images or GitHub Pages
+    const repoItems = [];
+    await Promise.all(repos.map(async repo => {
         const image = await getRepoImage(owner, repo.name);
-        return `<article class="fadein-article">
-            <a href="#">
-                ${image ? `<img src="${image}" alt="${repo.name} logo">` : ''}
-            </a>
-            <section>
-                <a href="${repo.html_url}" target="_blank"><strong>${repo.name}</strong></a>
-                <p> ${repo.description ? `<br><span>${repo.description}</span>` : ''} </p>
-                <a class="read" href="#" >View More &rarr;</a>
-            </section>
-        </article>`;
+        const hasPages = repo.has_pages;
+        // Hide repos with username in the name only for user repos
+        if ((image || hasPages) && (!filterUsername || !repo.name.toLowerCase().includes(owner.toLowerCase()))) {
+            repoItems.push({
+                html: `<li>
+                    <div class="card">
+                        <div class="preview-container">
+                            <a href="${repo.html_url}" target="_blank"> <div class="preview" style="background-image: url('${image || ''}');"></div></a>
+                        </div>
+                        <div class="truecontainer">
+                            <header class="row">
+                                <a href="${repo.html_url}" target="_blank"><strong>${repo.name}</strong></a>
+                            </header>
+                            ${repo.description ? `<div class="repo-desc"><span>${repo.description}</span></div>` : ''}
+                            ${hasPages ? `<div class="repo-pages"><a href='https://${owner}.github.io/${repo.name}/' target='_blank'>View GitHub Pages</a></div>` : ''}
+                        
+                        </div>
+                    </div>
+                </li>`
+            });
+        }
     }));
-    return '<section id="projects">' + repoItems.join('') + '</section>';
+    if (repoItems.length === 0) return '<p>No repositories found with images or GitHub Pages.</p>';
+    return '<ul class="cards-grid">' + repoItems.map(r => r.html).join('') + '</ul>';
 }
 
 async function renderProjects() {
@@ -38,14 +52,13 @@ async function renderProjects() {
     const repoListKei = document.getElementById('repo-list-kei');
     const repoListOrg = document.getElementById('repo-list-org');
 
-    // KeiBlackley
+    // KeiBlackley (user) - filter username
     const keiRepos = await fetchRepos('KeiBlackley');
-    repoListKei.innerHTML = await renderRepoList(keiRepos, 'KeiBlackley');
+    repoListKei.innerHTML = await renderRepoList(keiRepos, 'KeiBlackley', true);
 
-    // Keirran-Blackley
+    // Keirran-Blackley (org) - do not filter username
     const orgRepos = await fetchRepos('Keirran-Blackley');
-    repoListOrg.innerHTML = await renderRepoList(orgRepos, 'Keirran-Blackley');
+    repoListOrg.innerHTML = await renderRepoList(orgRepos, 'Keirran-Blackley', false);
 }
 
-// Only load projects when the tab is activated
 window.renderProjects = renderProjects;

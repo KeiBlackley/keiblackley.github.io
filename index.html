@@ -18,6 +18,7 @@
 		<link href="assets/css/dropdown-nav.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/tabbed-nav.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/tabbed.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/cards.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/auth.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/page.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/footer.css" rel="stylesheet" type="text/css" />
@@ -64,11 +65,27 @@
 			</section>
 				
 			<section id="about" class="tabcontent container">
-				About
+				About 
 			</section>
 				
 			<section id="projects" class="tabcontent container">
-				Projects
+				<div class="container">
+					<h2> Code </h2>
+					<p> <a href="https://codepen.io/KeiBlackley" target="_blank">View code snippets via CodePen</a> </p>
+				</div>
+
+				<!-- GitHub API loaded by JS -->
+				 <div id="cards" class="row">
+					<div class="column half container">
+						<h2>GitHub Projects</h2>
+						<div id="repo-list-kei">Loading...</div>
+					</div>
+
+					<div class="column half container">
+						<h2>Organisation Projects</h2>
+						<div id="repo-list-org">Loading...</div>
+					</div>
+				</div>
 			</section>
 		</main>
 
