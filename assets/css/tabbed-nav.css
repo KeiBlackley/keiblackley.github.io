@@ -1,0 +1,203 @@
+/* Custom Vars */
+:root {
+  --default-main-margin: 35px; /* height of nav */
+  
+  --normal-padding: 8px 16px;
+  
+  --default-text-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
+  --default-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  
+  /* a */
+  --default-link-active-bg: #003454;
+  --default-link-active-col: whitesmoke;
+  
+  /* nav */
+  --default-nav-padding: 10px;
+  --default-nav-bg: #003454;
+  --default-nav-col: whitesmoke;
+  --default-nav-droplist-bg: #f9f9f9;
+  /* --default-nav-droplist-col: ; */
+  --default-nav-hover-bg: #eee;
+  --default-nav-hover-col: #000000;
+  --default-nav-droplink-hover-bg: #eee;
+  --default-nav-droplink-hover-col: black;
+}
+
+button { font-family: inherit; font-size: inherit; }
+
+/* dropdown-nav.css */
+
+/*
+ * Responsive, fixed, dropdown
+*/
+
+
+nav.tabbed { overflow: hidden; background: var(--default-nav-bg); color: var(--default-nav-col); }
+
+nav .tabs { display: flex; justify-content: center; align-items: center; }
+nav .tabs button { background-color: inherit; color: inherit; border: inherit; cursor: pointer; }
+
+nav.tabbed ul, nav.tabbed ol { list-style: none; padding: 0; }
+nav.tabbed li { margin: 0; }
+/* Navbar Links */
+nav.tabbed ul > li > a:first-child:not(.mobilenav-icon),
+nav.tabbed ul > li > button:first-child:not(.mobilenav-icon){ padding: var(--default-nav-padding) calc(var(--default-nav-padding)*2); margin: 0; }
+/* All Links */
+nav.tabbed a, nav.tabbed a:visited,
+.droplist a, .droplist a:visited,
+nav.tabbed button, .droplist button { text-decoration: none; float: left; display: block; color: inherit; padding: var(--default-nav-padding); }
+/* All Links Active */
+nav.tabbed a.active, nav.tabbed a:visited.active,
+nav.tabbed button.active { background-color: var(--default-link-active-bg); color: var(--default-link-active-col); }
+/* Dropdown */
+nav.tabbed .dropdown { float: left; overflow: hidden; }
+/* Dropdown Parent Link */
+nav.tabbed .dropdown > a:first-child,
+nav.tabbed .dropdown > a:visited:first-child,
+nav.tabbed .dropdown > button:first-child,
+nav.tabbed .droplist { margin: 0; }
+/* Dropdown Content */
+nav.tabbed .droplist { border-top: 0; display: none; position: absolute; margin-left: 0; margin-top: calc(var(--default-nav-padding)*2 + 15px); z-index: 89; box-shadow: var(--default-box-shadow); background-color: var(--default-nav-droplist-bg); }
+/* All Links Hover */
+nav.tabbed a:hover, nav.tabbed a:visited:hover,
+.droplist a:hover, .droplist a:visited:hover
+nav.tabbed button:hover, .droplist button:hover { background-color: var(--default-nav-hover-bg); color: var(--default-nav-hover-col); }
+/* Dropdown Parent Link Hover and clipping fix */
+nav.tabbed .dropdown a:first-child:hover ~ .droplist,
+nav.tabbed .dropdown button:first-child:hover ~ .droplist,
+nav.tabbed .droplist:hover { display: block; }
+/* Dropdown Content Links */
+nav.tabbed .droplist a, nav.tabbed .droplist a:visited,
+nav.tabbed .droplist button { padding: var(--default-nav-padding) calc(var(--default-nav-padding)*2); min-width: 200px; width: 100%; background-color: var(--default-nav-droplink-hover-bg); color: var(--default-nav-droplink-hover-col); }
+/* Mobile Nav Icon */
+nav.tabbed .mobilenav-icon { display: none; }
+
+/* Sticky Nav */
+nav.tabbed { z-index: 90; position: sticky; width: 100%; top: 0; }
+nav.tabbed .droplist { position: fixed; }
+
+@media screen and (max-width: 768px) {
+    nav .tabs { display: block; justify-content: left; align-items: left; }
+    nav.responsive .tabs button { width: 50%; float: left; }
+
+    nav.tabbed ul { flex-direction: column; }
+    /* Resets Margins */
+    nav.tabbed ul > li > a:first-child:not(.mobilenav-icon),
+    nav.tabbed ul > li > button:first-child:not(.mobilenav-icon) { margin: 0; }
+    /* Hides Nav Links */
+    nav.tabbed a, nav.tabbed a:visited, .droplist a, .droplist a:visited,
+    nav.tabbed button, .droplist button, .droplist button:visited { display: none; }
+    /* Shows First Link */
+    nav.tabbed li:first-child a,
+    nav.tabbed li:first-child button { display: block; }
+    nav.tabbed .mobilenav-icon,
+    nav.tabbed .mobilenav-icon button { font-weight: bold; text-transform: uppercase; position: absolute; right: 0; top: 0; display: block !important; }
+    nav.tabbed .mobilenav-icon i { margin: 0 calc(var(--default-nav-padding)/2); }
+    
+    /* Responsive Nav */
+    nav.tabbed.responsive { position: relative; }
+    nav.tabbed.responsive a,
+    nav.tabbed.responsive button { float: none; display: block; text-align: left; }
+    nav.tabbed.responsive .dropdown { float: none; }
+    nav.tabbed.responsive .droplist { position: relative; }
+    nav.tabbed.responsive .dropdown a:first-,
+    nav.tabbed.responsive .dropdown button:first-child { display: block; width: 100%; text-align: left; }
+
+    nav.tabbed.responsive .droplist { margin-top: 0; } 
+
+    nav.tabbed.responsive ul > li,
+    nav.tabbed.responsive ul > li > a,
+    nav.tabbed.responsive ul > li > button {
+        display: block !important;
+    }
+    nav.tabbed.responsive .mobilenav-icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: none !important;
+    }
+}
+
+
+
+
+/* tabbed.css */
+
+/*
+ * Tabbed content - uses tabbed.js
+*/
+
+:root {
+  --tab-link-active: var(--default-nav-droplink-hover-bg);
+  --tab-link-active-col: #eee;
+  
+}
+
+* { margin:0; padding:0; box-sizing: border-box; }
+
+/* Style the tab */
+
+nav .tabs {
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+
+nav .tabs .link {
+  text-align: left;
+  background-color: inherit;
+  color: #000;
+  float: left;
+  display: block;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 16px;
+  transition: 0.5s;
+}
+
+/* Change background color of buttons on hover */
+
+nav .tabs .link:hover {
+  background-color: var(--default-nav-droplist-bg);
+  color: var(--default-nav-hover-col);
+}
+
+/* Create an active/current tablink class */
+
+nav .tabs .link.active {
+  background-color: var(--default-nav-bg);
+  color: var(--default-nav-hover-col);
+}
+
+/* Style the tab content */
+
+.tabcontent {
+  display: none;
+  padding: 16px;
+  border-top: none;
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+@media screen and (max-width: 768px) {
+  nav .tabs li:not(:first-child) { display: none; }
+  .mobilenav-icon { position: absolute; display: block; }
+}
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+
+
+
+
+
+
+/*
+ * CUSTOM
+*/
+nav .tabs { background-color: inherit; color: inherit; }
+nav .tabs .link { color: inherit; }

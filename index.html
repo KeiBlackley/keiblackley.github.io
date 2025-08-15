@@ -16,15 +16,60 @@
 
 		<link href="assets/css/global.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/dropdown-nav.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/tabbed-nav.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/tabbed.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/auth.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/page.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/footer.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
+		<nav class="tabbed">
+			<ul class="tabs"> <!-- links -->
+				<li class="dropdown"> 
+					<button onclick="toggleTab(event, 'welcome')" class="link">Welcome</button> 
+					<ol class="droplist">
+						<li> <a href="javascript:void(0);" onclick="toggleTab(event, 'about');">About</a> </li>
+					</ol>
+				</li>
+					
+				<li class="dropdown"> 
+					<button class="link">Code & Projects</button> 
+					<ol class="droplist">
+						<li> <a href="javascript:void(0);" onclick="toggleTab(event, 'projects');">Projects</a> </li>
+						<li> <a href="https://github.com/KeiBlackley" target="_blank">GitHub Personal</a> </li>
+						<li> <a href="https://github.com/Keirran-Blackley" target="_blank">GitHub Organisation</a> </li>
+						<li> <a href="https://codepen.io/KeiBlackley" target="_blank">Snippets on CodePen</a> </li>
+					</ol> 
+				</li>
+
+				<li> <a href="https://keirranblackley.com" target="_blank">Website</a> </li>
+
+				<li class="dropdown"> 
+					<button class="link">Socials</button> 
+					<ol class="droplist">
+						<li> <a href="https://github.com/KeiBlackley" target="_blank">GitHub</a> </li>
+						<li> <a href="https://instagram.com/KeiBlackley" target="_blank">Instagram</a> </li>
+						<li> <a href="https://x.com/KeiBlackley" target="_blank">X / Twitter</a> </li>
+						<li> <a href="https://codepen.io/KeiBlackley" target="_blank">CodePen</a> </li>
+					</ol> 
+				</li>
+
+				<li class="mobilenav-icon"> <button onclick="toggleMobileNav()">MENU</button> </li>
+			</ul>
+		</nav>
 
 		<main>
-			<p> Hello world. </p>
+			<section id="welcome" class="tabcontent container">
+				Welcome
+			</section>
+				
+			<section id="about" class="tabcontent container">
+				About
+			</section>
+				
+			<section id="projects" class="tabcontent container">
+				Projects
+			</section>
 		</main>
 
 		<footer>
@@ -43,25 +88,44 @@
 				<div class="sitemap align-right">
 					<h4> Site Map </h4>
 					<ul>
-						<li> <a href="index"> Home </a> </li>
-						<li> <a href="about"> About </a> </li>
+						<li> <a href="javascript:void(0);" onclick="toggleTab(event, 'welcome');">Home</a> </li>
+						<li> <a href="javascript:void(0);" onclick="toggleTab(event, 'about');">About</a> </li>
+						<li> <a href="javascript:void(0);" onclick="toggleTab(event, 'projects');">Projects</a> </li>
 						<li> <a href="https://keirranblackley.com/"> Website </a> </li>
 					</ul>
 				</div>
 
 				<div class="contact">
-					<h4> Contact </h4>
+					<h4> Socials </h4>
 					<ul>
 						<li> <a href="https://github.com/KeiBlackley" target="_blank">GitHub</a> </li>
 						<li> <a href="https://instagram.com/KeiBlackley" target="_blank">Instagram</a> </li>
 						<li> <a href="https://x.com/KeiBlackley" target="_blank">X / Twitter</a> </li>
+						<li> <a href="https://codepen.io/KeiBlackley" target="_blank">CodePen</a> </li>
 					</ul>
 				</div>
 			</div>
 		</footer>
 
 
-		<script src="assets/scripts/dropdown-nav.js"></script>
+		<script src="assets/scripts/responsive-nav.js"></script>
 		<script src="assets/scripts/tabbed.js"></script>
+		<script src="assets/scripts/github.js"></script>
+		<script>
+			// Ensure projects tab loads GitHub repos when activated
+			function toggleTab(event, tabId) {
+				event.preventDefault();
+				// Hide all tabcontent
+				document.querySelectorAll('.tabcontent').forEach(el => el.style.display = 'none');
+				// Show selected tab
+				const tab = document.getElementById(tabId);
+				if (tab) {
+					tab.style.display = 'block';
+					if (tabId === 'projects' && window.renderProjects) {
+						window.renderProjects();
+					}
+				}
+			}
+		</script>
 	</body>
 </html>

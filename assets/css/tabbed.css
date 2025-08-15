@@ -11,7 +11,7 @@
 * { margin:0; padding:0; box-sizing: border-box; }
 
 /* Style the tab */
-.tabbed {
+div.tabbed {
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
@@ -19,7 +19,7 @@
 }
 
 /* Style the buttons that are used to open the tab content */
-.tabbed .link {
+div.tabbed .link {
   background-color: inherit;
   color: #000;
   float: left;
@@ -33,24 +33,24 @@
 }
 
 /* Change background color of buttons on hover */
-.tabbed .link:hover {
+div.tabbed .link:hover {
   background-color: #ddd;
 }
 
 /* Create an active/current tablink class */
-.tabbed .link .active {
+div.tabbed .link.active {
   background-color: var(--tab-link-active);
 }
 
 /* Style the tab content */
-.tabcontent {
+div.tabcontent {
   display: none;
   padding: 16px;
   border: 1px solid #ccc;
   border-top: none;
 } 
 
-.tabcontent {
+div.tabcontent {
   animation: fadeEffect 1s; /* Fading effect takes 1 second */
 }
 
