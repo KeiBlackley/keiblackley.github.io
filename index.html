@@ -26,12 +26,7 @@
 	<body>
 		<nav class="tabbed">
 			<ul class="tabs"> <!-- links -->
-				<li class="dropdown"> 
-					<button onclick="toggleTab(event, 'welcome')" class="link">Welcome</button> 
-					<ol class="droplist">
-						<li> <a href="javascript:void(0);" onclick="toggleTab(event, 'about');">About</a> </li>
-					</ol>
-				</li>
+				<li> <button onclick="toggleTab(event, 'welcome')" class="link">Welcome</button> </li>
 					
 				<li class="dropdown"> 
 					<button class="link">Code & Projects</button> 
@@ -60,20 +55,24 @@
 		</nav>
 
 		<main>
-			<section id="welcome" class="tabcontent container">
-				Welcome
-			</section>
-				
-			<section id="about" class="tabcontent container">
-				About 
-			</section>
-				
-			<section id="projects" class="tabcontent container">
-				<div class="container">
-					<h2> Code </h2>
-					<p> <a href="https://codepen.io/KeiBlackley" target="_blank">View code snippets via CodePen</a> </p>
+			<section id="welcome" class="tabcontent hero container">
+				<div class="profile-card">
+					<div class="profile-image">
+						<img src="https://keiblackley.github.io/assets/images/logo.png" alt="User" />
+					</div>
+					
+					<h2> Keirran Blackley </h2>
+					<p> Developer - Technician - Student </p>
+					
+					<div class="social-icons">
+						<a href="https://instagram.com/KeiBlackley" target="_blank"><i class="fab fa-instagram"></i></a>
+						<a href="https://keirranblackley.com/" target="_blank"><i class="fa-solid fa-globe"></i></a>
+						<a href="https://github.com/KeiBlackley" target="_blank"><i class="fab fa-github"></i></a>
+					</div>
 				</div>
-
+			</section>
+		
+			<section id="projects" class="tabcontent hero container">
 				<!-- GitHub API loaded by JS -->
 				 <div id="cards" class="row">
 					<div class="column half container">
@@ -129,9 +128,9 @@
 		<script src="assets/scripts/tabbed.js"></script>
 		<script src="assets/scripts/github.js"></script>
 		<script>
-			// Ensure projects tab loads GitHub repos when activated
+			// Tab switching logic
 			function toggleTab(event, tabId) {
-				event.preventDefault();
+				if (event) event.preventDefault();
 				// Hide all tabcontent
 				document.querySelectorAll('.tabcontent').forEach(el => el.style.display = 'none');
 				// Show selected tab
@@ -143,6 +142,15 @@
 					}
 				}
 			}
+
+			// On page load, show Welcome tab by default
+			document.addEventListener('DOMContentLoaded', function() {
+				// Hide all tabcontent
+				document.querySelectorAll('.tabcontent').forEach(el => el.style.display = 'none');
+				// Show Welcome tab
+				const welcomeTab = document.getElementById('welcome');
+				if (welcomeTab) welcomeTab.style.display = 'block';
+			});
 		</script>
 	</body>
 </html>

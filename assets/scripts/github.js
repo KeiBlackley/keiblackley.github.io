@@ -42,7 +42,7 @@ async function renderRepoList(repos, owner, filterUsername = false) {
         }
     }));
     if (repoItems.length === 0) return '<p>No repositories found with images or GitHub Pages.</p>';
-    return '<ul class="cards-grid">' + repoItems.map(r => r.html).join('') + '</ul>';
+    return '<ul class="cards-grid"><div class="profile-card">' + repoItems.map(r => r.html).join('') + '</div></ul>';
 }
 
 async function renderProjects() {

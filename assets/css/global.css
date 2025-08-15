@@ -66,6 +66,16 @@ main { background-color: #eee; }
   padding: 0;
 }
 
+/* */
+.hero {
+  background: linear-gradient(135deg, #003454, #282828);
+  color: #eee;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* */
 
 .row {
   display: flex;
