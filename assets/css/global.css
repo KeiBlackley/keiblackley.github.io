@@ -81,10 +81,6 @@ ul.styled { list-style-type: none; padding: 0; }
 .column.quarter { width: calc((100% - 16px) / 4); }
 .column.third { width: calc((100% - 16px) / 3); }
 .column.full { width: calc(100% - 16px); }
-.column:nth-child(odd) { background-color: #ddd; }
-
-
-
 
 .nobg { background-color: transparent; }
 
@@ -93,7 +89,7 @@ ul.styled { list-style-type: none; padding: 0; }
 .align-left { text-align: left; }
 
 .transparent { background: transparent; }
-.full-screen { width: 100%; height: 100vh; }
+.fullscreen { width: 100%; height: 100vh; }
 
 .padded { padding: 8px; }
 .padded-large { padding: 20px; }
