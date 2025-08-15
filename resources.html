@@ -16,6 +16,57 @@
         <link rel="stylesheet" href="assets/css/footer.css" />
     </head>
     <body>
+        <nav class="tabbed">
+			<ul class="tabs"> <!-- links -->
+                <li class="dropdown"> 
+					<button onclick="toggleTab(event, 'installations')" class="link"><i class="fa-solid fa-download"></i> Utilities</button> 
+					<ol class="droplist">
+                        <li> <a href="https://www.ccleaner.com/ccleaner/download" target="_blank"><i class="fa-solid fa-broom"></i> CCleaner</a> </li>
+						<li> <a href="https://www.malwarebytes.com/mwb-download/thankyou/" target="_blank"><i class="fa-solid fa-shield-virus"></i> Anti-Malware</a> </li>
+                        <li> <a href="https://www.avira.com/" target="_blank"><i class="fa-solid fa-virus-slash"></i> Anti-Virus</a> </li>
+					</ol>
+				</li>
+
+				<li class="dropdown"> 
+					<button onclick="toggleTab(event, 'welcome')" class="link"><i class="fa-solid fa-image"></i> Images / Icons</button> 
+					<ol class="droplist">
+						<li> <a href="https://favicon.io/favicon-converter/" target="_blank"><i class="fa-solid fa-icons"></i> Favicon Generator</a> </li>
+                        <li> <a href="#" id="placeholder-image-link"><i class="fa-solid fa-image"></i> Placehold Image</a> </li>
+                        <li> <a href="https://gist.github.com/rxaviers/7360908" target="_blank"><i class="fa-solid fa-face-smile"></i> GitHub Emoji Shortcodes</a> </li>
+                        <li> <a href="https://alexandresanlim.github.io/Badges4-README.md-Profile/" target="_blank"><i class="fa-brands fa-github"></i> GitHub Badges</a> </li>
+					</ol>
+				</li>
+				
+                <li class="dropdown"> 
+					<button onclick="toggleTab(event, 'welcome')" class="link"><i class="fa-solid fa-toolbox"></i> Mechanical</button> 
+					<ol class="droplist">
+                        <li> <a href="https://www.supercheapauto.com.au/" target="_blank"><i class="fa-solid fa-car"></i> Supercheap Auto</a> </li>
+						<li> <a href="https://rycofilters.com.au/" target="_blank"><i class="fa-solid fa-filter"></i> Search Filters</a> </li>
+                        <li> <a href="https://penriteoil.com.au/product-selector#/" target="_blank"><i class="fa-solid fa-oil-can"></i> Search Oil</a> </li>
+					</ol>
+				</li>
+
+                <li class="dropdown"> 
+					<button class="link">Java</button> 
+					<ol class="droplist">
+						<li> <a href="https://www.eclipse.org/downloads/" target="_blank"><i class="fa-solid fa-code"></i> Eclipse IDE</a> </li>
+						<li> <a href="https://www.oracle.com/au/java/technologies/downloads/" target="_blank"><i class="fa-brands fa-java"></i> Java Development Kit</a> </li>
+					</ol> 
+				</li>
+
+				<li class="dropdown"> 
+					<button class="link">Raspberry Pi</button> 
+					<ol class="droplist">
+						<li> <a href="https://pinout.xyz/pinout/pin12_gpio18/" target="_blank"><i class="fa-solid fa-map-pin"></i> 3B+ Pinout</a> </li>
+						<li> <a href="https://connect.raspberrypi.com/sign-in" target="_blank"><i class="fa-solid fa-code"></i> RPI Connect</a> </li>
+						<li> <a href="https://www.raspberrypi.com/documentation/computers/configuration.html#secure-your-raspberry-pi" target="_blank"><i class="fa-solid fa-gear"></i> Configuration</a> </li>
+					</ol> 
+				</li>
+
+				<li class="mobilenav-icon"> <button onclick="toggleMobileNav()">MENU</button> </li>
+			</ul>
+		</nav>
+        
         <main>
             <section id="software" class="footer-style">
                 <div class="container">
