@@ -48,7 +48,7 @@ input[type=submit], form button, .submit {
   background-color: var(--form-accent-col); 
   color: white;
   padding: 14px 20px;
-  margin: 16px 0;
+  margin: 16px auto;
   border: none;
   border-radius: 4px;
   cursor: pointer;
