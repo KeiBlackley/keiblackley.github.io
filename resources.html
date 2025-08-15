@@ -11,67 +11,31 @@
         <script src="assets/scripts/responsive-nav.js"></script>
         <script src="assets/scripts/resources.js"></script>
 
-        <link rel="stylesheet" href="assets/css/auth.css" />
+        <link href="assets/css/global.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/tabbed-nav.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/auth.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/footer.css" rel="stylesheet" type="text/css" />
+
         <link rel="stylesheet" href="assets/css/tabbed-nav.css" />
-		<link rel="stylesheet" href="assets/css/resources.css" />
+        <link rel="stylesheet" href="assets/css/auth.css" />
+        <link rel="stylesheet" href="assets/css/resources.css" />
         <link rel="stylesheet" href="assets/css/footer.css" />
     </head>
     <body>
         <nav class="tabbed">
 			<ul class="tabs"> <!-- links -->
-                <li class="dropdown"> 
-					<button onclick="toggleTab(event, 'installations')" class="link"><i class="fa-solid fa-download"></i> Utilities</button> 
-					<ol class="droplist">
-                        <li> <a href="https://www.ccleaner.com/ccleaner/download" target="_blank"><i class="fa-solid fa-broom"></i> CCleaner</a> </li>
-						<li> <a href="https://www.malwarebytes.com/mwb-download/thankyou/" target="_blank"><i class="fa-solid fa-shield-virus"></i> Anti-Malware</a> </li>
-                        <li> <a href="https://www.avira.com/" target="_blank"><i class="fa-solid fa-virus-slash"></i> Anti-Virus</a> </li>
-					</ol>
-				</li>
-
-				<li class="dropdown"> 
-					<button onclick="toggleTab(event, 'welcome')" class="link"><i class="fa-solid fa-image"></i> Images / Icons</button> 
-					<ol class="droplist">
-						<li> <a href="https://favicon.io/favicon-converter/" target="_blank"><i class="fa-solid fa-icons"></i> Favicon Generator</a> </li>
-                        <li> <a href="#" id="placeholder-image-link"><i class="fa-solid fa-image"></i> Placehold Image</a> </li>
-                        <li> <a href="https://gist.github.com/rxaviers/7360908" target="_blank"><i class="fa-solid fa-face-smile"></i> GitHub Emoji Shortcodes</a> </li>
-                        <li> <a href="https://alexandresanlim.github.io/Badges4-README.md-Profile/" target="_blank"><i class="fa-brands fa-github"></i> GitHub Badges</a> </li>
-					</ol>
-				</li>
-				
-                <li class="dropdown"> 
-					<button onclick="toggleTab(event, 'welcome')" class="link"><i class="fa-solid fa-toolbox"></i> Mechanical</button> 
-					<ol class="droplist">
-                        <li> <a href="https://www.supercheapauto.com.au/" target="_blank"><i class="fa-solid fa-car"></i> Supercheap Auto</a> </li>
-						<li> <a href="https://rycofilters.com.au/" target="_blank"><i class="fa-solid fa-filter"></i> Search Filters</a> </li>
-                        <li> <a href="https://penriteoil.com.au/product-selector#/" target="_blank"><i class="fa-solid fa-oil-can"></i> Search Oil</a> </li>
-					</ol>
-				</li>
-
-                <li class="dropdown"> 
-					<button class="link">Java</button> 
-					<ol class="droplist">
-						<li> <a href="https://www.eclipse.org/downloads/" target="_blank"><i class="fa-solid fa-code"></i> Eclipse IDE</a> </li>
-						<li> <a href="https://www.oracle.com/au/java/technologies/downloads/" target="_blank"><i class="fa-brands fa-java"></i> Java Development Kit</a> </li>
-					</ol> 
-				</li>
-
-				<li class="dropdown"> 
-					<button class="link">Raspberry Pi</button> 
-					<ol class="droplist">
-						<li> <a href="https://pinout.xyz/pinout/pin12_gpio18/" target="_blank"><i class="fa-solid fa-map-pin"></i> 3B+ Pinout</a> </li>
-						<li> <a href="https://connect.raspberrypi.com/sign-in" target="_blank"><i class="fa-solid fa-code"></i> RPI Connect</a> </li>
-						<li> <a href="https://www.raspberrypi.com/documentation/computers/configuration.html#secure-your-raspberry-pi" target="_blank"><i class="fa-solid fa-gear"></i> Configuration</a> </li>
-					</ol> 
-				</li>
+				<li> <button onclick="toggleTab(event, 'software')" class="link"><i class="fa-solid fa-download"></i> Software</button> </li>
+                
+                <li> <button onclick="toggleTab(event, 'images')" class="link"><i class="fa-solid fa-image"></i> Image Resources</button> </li>
 
 				<li class="mobilenav-icon"> <button onclick="toggleMobileNav()">MENU</button> </li>
 			</ul>
 		</nav>
         
         <main>
-            <section id="software" class="footer-style">
+            <section id="software" class="footer-style tabcontent">
                 <div class="container">
-                    <div class="sitemap align-right">
+                    <div class="base">
                         <h4> Software </h4>
                         <ul>
                             <li> <a href="https://www.ccleaner.com/ccleaner/download" target="_blank"><i class="fa-solid fa-broom"></i> CCleaner</a> </li>
@@ -81,7 +45,7 @@
                         </ul>
                     </div>
 
-                    <div class="sitemap align-right">
+                    <div class="base align-right">
                         <h4> Utilities </h4>
                         <ul>
                             <li> <a href="https://www.apachefriends.org/download.html" target="_blank"><i class="fa-solid fa-server"></i> XAMPP</a> </li>
@@ -89,7 +53,7 @@
                         </ul>
                     </div>
 
-                     <div class="sitemap align-right">
+                     <div class="base align-right">
                         <h4> Programming </h4>
                         <ul>
 					        <li> <a href="https://code.visualstudio.com/insiders/" target="_blank"><i class="fa-brands fa-code"></i> Visual Studio Code Insiders</a> </li>
@@ -100,16 +64,16 @@
                 </div>
             </section>
 
-            <section id="images" class="footer-style">
+            <section id="images" class="footer-style tabcontent">
                 <div class="container">
-                    <div class="sitemap align-right">
+                    <div class="base">
                         <h4> Image Editors </h4>
                         <ul>
                             <li> <a href="https://www.getpaint.net/download.html#download" target="_blank"><i class="fa-solid fa-code"></i> Paint.NET</a> </li>
                         </ul>
                     </div>
 
-                    <div class="sitemap align-right">
+                    <div class="base align-right">
                         <h4> Image Resources </h4>
                         <ul>
                             <li> <a href="https://favicon.io/favicon-converter/" target="_blank"><i class="fa-solid fa-icons"></i> Favicon Generator</a> </li>
@@ -118,7 +82,7 @@
                         </ul>
                     </div>
 
-                     <div class="sitemap align-right">
+                     <div class="base align-right">
                         <h4> Icon Links </h4>
                         <ul>
 					    	<li> <a href="https://gist.github.com/rxaviers/7360908" target="_blank"><i class="fa-solid fa-face-smile"></i> GitHub Emoji Shortcodes</a> </li>
@@ -142,7 +106,7 @@
                     <p class="copyright"> &copy; 2025
                 </div>
 
-                <div class="contact">
+                <div class="sitemap align-right">
                     <h4> Links </h4>
                     <ul>
                         <li> <a href="https://keirranblackley.com">Website</a> </li>
@@ -162,5 +126,15 @@
                 </div>
             </div>
         </footer>
+
+        <script src="assets/scripts/responsive-nav.js"></script>
+		<script src="assets/scripts/tabbed.js"></script>
+		<script>
+			// On page load, show Welcome tab by default
+			document.addEventListener('DOMContentLoaded', function() {
+				// Show all tabcontent
+				document.querySelectorAll('.tabcontent').forEach(el => el.style.display = 'block');
+			});
+		</script>
     </body>
 </html>
