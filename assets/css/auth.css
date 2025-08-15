@@ -43,19 +43,19 @@ input, select, textarea {
   box-sizing: border-box;
 }
 
-input[type=submit], form button {
+input[type=submit], form button, .submit {
   width: 100%;
   background-color: var(--form-accent-col); 
   color: white;
   padding: 14px 20px;
-  margin: 16px 0;
+  margin: 16px auto;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.5s ease; 
 }
 
-input[type=submit]:hover, form button:hover {
+input[type=submit]:hover, form button:hover, .submit:hover {
   background-color: var(--form-submit-confirm);
 }
 
