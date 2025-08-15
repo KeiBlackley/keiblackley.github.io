@@ -12,7 +12,7 @@
 html, body {
   line-height: 1.5;
   font-family: "Quicksand", "Lexend", sans-serif;
-  background-color: #eee;
+  background-color: #282828;
 }
 
 /* links */
@@ -39,6 +39,8 @@ ul.styled { list-style-type: none; padding: 0; }
   display: block;
   width: 100%;
 }
+
+main { background-color: #eee; }
 
 .container { margin: 30px auto; padding: var(--normal-padding); max-width: 80%; }
 .container .actions {
