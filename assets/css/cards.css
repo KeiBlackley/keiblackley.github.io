@@ -1,14 +1,19 @@
 
 
+
 #cards .cards-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
   padding: 16px 0;
 }
 
 @media (max-width: 700px) {
-  #cards .cards-grid { grid-template-columns: 1fr; }
+  #cards .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 8px 0;
+  }
 }
 
 #cards .cards-grid li {
@@ -35,34 +40,40 @@
   text-align: center;
 }
 
+
 #cards .card {
-    position: relative;
-    margin: .5rem;
-    width: 80vw;
-    min-width: 200px;
-    max-width: 20rem;
-    border-radius: .5rem;
-    overflow: clip;
+  position: relative;
+  margin: .5rem auto;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  border-radius: .5rem;
+  overflow: clip;
+  box-sizing: border-box;
 }
+
 
 #cards .preview-container{
-    z-index: 1;
-    height: 11.3rem;
-    position: absolute;
-    left: 5%;
-    top: 5%;
-    width: 90%;
+  z-index: 1;
+  height: 11.3rem;
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  width: 90%;
+  max-width: 100%;
 }
 
+
 #cards .preview{
-    cursor: pointer;
-    background-color: #1E1F26;
-    background: white;
-    height: 11.3rem;
-    width: 100%;
-    border-radius: .5rem;
-    background-size:cover;
-    background-position:center;
+  cursor: pointer;
+  background-color: #1E1F26;
+  background: white;
+  height: 11.3rem;
+  width: 100%;
+  border-radius: .5rem;
+  background-size:cover;
+  background-position:center;
+  max-width: 100%;
 }
 
 #cards .card:hover .truecontainer {
@@ -70,14 +81,17 @@
     clip-path: inset(0% 0% 0% 0% round .6rem);
 }
 
+
 #cards .truecontainer {
-    padding-left: 2rem !important;
-    background-color: #1E1F26;
-    padding: .8rem;
-    padding-right: 1.6rem !important;
-    transition: .3s clip-path;
-    clip-path: inset(10% 0% 0% 5% round .6rem);
-    padding-top: 12.2rem;
+  padding-left: 2rem !important;
+  background-color: #1E1F26;
+  padding: .8rem;
+  padding-right: 1.6rem !important;
+  transition: .3s clip-path;
+  clip-path: inset(10% 0% 0% 5% round .6rem);
+  padding-top: 12.2rem;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 #cards .row {
