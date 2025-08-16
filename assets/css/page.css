@@ -1,10 +1,7 @@
 /* page.css */
 
-/*
- * Creates an A4 page layout
-*/
-
-* { margin:0; padding:0; box-sizing: border-box; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background-color: #003454;  }
 
 page h1, page h2, page h3, page h4, page h5 { margin-bottom: 16px; }
 page {
@@ -12,15 +9,33 @@ page {
   background: white;
   display: block;
   margin: 0 auto;
+  margin-bottom: 0.5cm;
   box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
 }
-page[size="A4"] { width: 21cm; height: 29.7cm; }
-page[size="A4"][layout="landscape"] { width: 29.7cm; height: 21cm; }
-page[size="A3"] { width: 29.7cm; height: 42cm; }
-page[size="A3"][layout="landscape"] { width: 42cm; height: 29.7cm; }
-page[size="A5"] { width: 14.8cm; height: 21cm; }
-page[size="A5"][layout="landscape"] { width: 21cm; height: 14.8cm; }
-
+page[size="A4"] {  
+  width: 21cm;
+  height: 29.7cm; 
+}
+page[size="A4"][layout="landscape"] {
+  width: 29.7cm;
+  height: 21cm;  
+}
+page[size="A3"] {
+  width: 29.7cm;
+  height: 42cm;
+}
+page[size="A3"][layout="landscape"] {
+  width: 42cm;
+  height: 29.7cm;  
+}
+page[size="A5"] {
+  width: 14.8cm;
+  height: 21cm;
+}
+page[size="A5"][layout="landscape"] {
+  width: 21cm;
+  height: 14.8cm;  
+}
 @media print {
   body, page {
     background: white;
