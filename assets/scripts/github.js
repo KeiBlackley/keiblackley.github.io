@@ -34,7 +34,6 @@ async function renderRepoList(repos, owner, filterUsername = false) {
                             </header>
                             ${repo.description ? `<div class="repo-desc"><span>${repo.description}</span></div>` : ''}
                             ${hasPages ? `<div class="repo-pages"><a href='https://${owner}.github.io/${repo.name}/' target='_blank'>View GitHub Pages</a></div>` : ''}
-                        
                         </div>
                     </div>
                 </li>`
@@ -42,7 +41,9 @@ async function renderRepoList(repos, owner, filterUsername = false) {
         }
     }));
     if (repoItems.length === 0) return '<p>No repositories found with images or GitHub Pages.</p>';
-    return '<ul class="cards-grid"><div class="profile-card">' + repoItems.map(r => r.html).join('') + '</div></ul>';
+    // Return a proper grid of 2 columns
+    // Grid of 6 columns
+    return `<ul class="cards-grid grid-6">${repoItems.map(r => r.html).join('')}</ul>`;
 }
 
 async function renderProjects() {
@@ -52,13 +53,14 @@ async function renderProjects() {
     const repoListKei = document.getElementById('repo-list-kei');
     const repoListOrg = document.getElementById('repo-list-org');
 
-    // KeiBlackley (user) - filter username
-    const keiRepos = await fetchRepos('KeiBlackley');
-    repoListKei.innerHTML = await renderRepoList(keiRepos, 'KeiBlackley', true);
-
     // Keirran-Blackley (org) - do not filter username
     const orgRepos = await fetchRepos('Keirran-Blackley');
-    repoListOrg.innerHTML = await renderRepoList(orgRepos, 'Keirran-Blackley', false);
+    repoListKei.innerHTML = await renderRepoList(orgRepos, 'Keirran-Blackley', false);
+
+    // KeiBlackley (user) - filter username
+    const keiRepos = await fetchRepos('KeiBlackley');
+    repoListKei.innerHTML += await renderRepoList(keiRepos, 'KeiBlackley', true);
+
 }
 
 window.renderProjects = renderProjects;

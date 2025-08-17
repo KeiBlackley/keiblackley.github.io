@@ -32,9 +32,7 @@
 					<button class="link">Code & Projects</button> 
 					<ol class="droplist">
 						<li> <a href="javascript:void(0);" onclick="toggleTab(event, 'projects');">Projects</a> </li>
-						<li> <a href="https://github.com/KeiBlackley" target="_blank">GitHub Personal</a> </li>
-						<li> <a href="https://github.com/Keirran-Blackley" target="_blank">GitHub Organisation</a> </li>
-						<li> <a href="https://codepen.io/KeiBlackley" target="_blank">Snippets on CodePen</a> </li>
+						<li> <a href="https://codepen.io/KeiBlackley" target="_blank">Frontend Code</a> </li>
 					</ol> 
 				</li>
 
@@ -60,7 +58,7 @@
 			<section id="welcome" class="tabcontent hero container">
 				<div class="profile-card">
 					<div class="profile-image">
-						<img src="https://keiblackley.github.io/assets/images/logo.png" alt="User" />
+						<img src="https://keirran-blackley.github.io/assets/images/kbcom/logo-icon-light.png" alt="Logo" />
 					</div>
 					
 					<h2> Keirran Blackley </h2>
@@ -74,18 +72,17 @@
 				</div>
 			</section>
 		
-			<section id="projects" class="tabcontent hero container">
+			<section id="projects" class="tabcontent">
 				<!-- GitHub API loaded by JS -->
-				 <div id="cards" class="row">
-					<div class="column half container">
-						<h2>GitHub Projects</h2>
-						<div id="repo-list-kei">Loading...</div>
-					</div>
-
-					<div class="column half container">
-						<h2>Organisation Projects</h2>
-						<div id="repo-list-org">Loading...</div>
-					</div>
+				<div id="cards">
+					<ul class="cards-grid">
+						<li>
+							<div class="column container">
+								<h2>GitHub Projects and Pages</h2>
+								<div id="repo-list-kei">Loading...</div>
+							</div>
+						</li>
+					</ul>
 				</div>
 			</section>
 		</main>

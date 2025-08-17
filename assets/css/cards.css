@@ -33,18 +33,41 @@
   }
 }
 
+/* Project Cards Grid of 2 Columns - Override for .cards-grid */
 #cards .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-  padding: 16px 0;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 32px;
+  padding: 24px 0;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   #cards .cards-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
-    padding: 8px 0;
+    gap: 20px;
+    padding: 16px 0;
+  }
+}
+
+/* Grid of 6 columns for combined repos */
+#cards .cards-grid.grid-6 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 32px;
+  padding: 24px 0;
+  align-items: stretch;
+}
+
+@media (max-width: 1400px) {
+  #cards .cards-grid.grid-6 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  #cards .cards-grid.grid-6 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 16px 0;
   }
 }
 
@@ -140,17 +163,12 @@
 
 /* PROFILE CARD */
 .profile-card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 10px;
   width: 100%;
   text-align: center;
   max-width: 300px;
   margin: auto;
   color: white;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-  transition: 0.3s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .profile-image img {
