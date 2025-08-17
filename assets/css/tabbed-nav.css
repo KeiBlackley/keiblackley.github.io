@@ -77,6 +77,8 @@ nav.tabbed { z-index: 90; position: sticky; width: 100%; top: 0; }
 nav.tabbed .droplist { position: fixed; }
 
 @media screen and (max-width: 768px) {
+    nav.tabbed { font-size: large; padding: 8px; }
+
     nav .tabs { display: block; justify-content: left; align-items: left; }
     nav.responsive .tabs button { width: 50%; float: left; }
 
@@ -99,8 +101,8 @@ nav.tabbed .droplist { position: fixed; }
     nav.tabbed.responsive a,
     nav.tabbed.responsive button { float: none; display: block; text-align: left; }
     nav.tabbed.responsive .dropdown { float: none; }
-    nav.tabbed.responsive .droplist { position: relative; }
-    nav.tabbed.responsive .dropdown a:first-,
+    nav.tabbed.responsive .droplist { position: absolute; }
+    nav.tabbed.responsive .dropdown a:first-child,
     nav.tabbed.responsive .dropdown button:first-child { display: block; width: 100%; text-align: left; }
 
     nav.tabbed.responsive .droplist { margin-top: 0; } 
@@ -118,8 +120,13 @@ nav.tabbed .droplist { position: fixed; }
     }
 }
 
-
-
+@media screen and (max-width: 768px) {
+  nav.responsive .tabs li { display: block !important; }
+  nav.responsive .tabs li .droplist { display: block !important; position: static !important; }
+  nav.responsive .tabs li .droplist a { display: block !important; }
+  nav.responsive .tabs li:not(:first-child) { display: block !important; }
+  nav.tabbed.responsive .mobilenav-icon { position: absolute; display: block; }
+}
 
 /* tabbed.css */
 
