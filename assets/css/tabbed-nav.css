@@ -126,9 +126,9 @@ nav.tabbed .droplist { position: fixed; }
   nav.responsive .tabs li .droplist { display: block !important; position: static !important; }
   nav.responsive .tabs li .droplist a { display: block !important; }
   nav.responsive .tabs li:not(:first-child) { display: block !important; }
-  nav.tabbed.responsive .mobilenav-icon { display: block; }
+  nav.tabbed.responsive .mobilenav-icon { position: fixed; top: 8px; right: 28px; display: block; }
 
-  nav.tabbed .mobilenav-icon { position: fixed; top: 20px; right: 20px; }
+  nav.tabbed .mobilenav-icon { position: fixed; top: 8px; right: 0px; }
 }
 
 /* tabbed.css */
