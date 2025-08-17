@@ -120,12 +120,15 @@ nav.tabbed .droplist { position: fixed; }
     }
 }
 
+/* FIX FOR DROPNAV RESPONSIVE */
 @media screen and (max-width: 768px) {
   nav.responsive .tabs li { display: block !important; }
   nav.responsive .tabs li .droplist { display: block !important; position: static !important; }
   nav.responsive .tabs li .droplist a { display: block !important; }
   nav.responsive .tabs li:not(:first-child) { display: block !important; }
-  nav.tabbed.responsive .mobilenav-icon { position: absolute; display: block; }
+  nav.tabbed.responsive .mobilenav-icon { display: block; }
+
+  nav.tabbed .mobilenav-icon { position: fixed; top: 20px; right: 20px; }
 }
 
 /* tabbed.css */
